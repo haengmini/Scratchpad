@@ -1,0 +1,24 @@
+
+# Vivado
+*.jou
+*.log
+*.pb
+*.wdb
+*.str
+*.os
+*.jou
+*.log
+*.str
+
+# Temporary files
+.Xil/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.hw/
+*.cache/
+*.srcs/utils_1/
+*.xsa
+*.bit
+*.bin
+*.elf

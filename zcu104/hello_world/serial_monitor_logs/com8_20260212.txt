@@ -1,0 +1,12 @@
+Zynq MP First Stage Boot Loader 
+Release 2024.2   Feb 12 2026  -  14:23:41
+PMU-FW is not running, certain applications may not be supported.
+Hello World
+Successfully ran Hello World application
+---
+Zynq MP First Stage Boot Loader 
+Release 2024.2   Feb 12 2026  -  15:00:42
+PMU-FW is not running, certain applications may not be supported.
+Hello World
+Successfully ran Hello World application
+---

@@ -1,0 +1,4 @@
+domain_path: D:\Lab\scratchpad\zcu104\hello_world\hello_world_platform\export\hello_world_platform\sw\standalone_psu_cortexa53_0
+app_src_dir: D:\Programs\Vitis\2024.2\data\embeddedsw\lib\sw_apps\hello_world
+template: hello_world
+lang: c

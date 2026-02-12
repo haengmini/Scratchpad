@@ -1,0 +1,7 @@
+﻿baseline_results,,,,,,
+,,,,,,
+Week,Task,Metric,Value,Unit,Timestamp,Notes
+1,Hello World,Build Success,1,boolean,2026-02-12 14:23:46,First successful build
+1,Hello World,Execution Success,1,boolean,2026-02-12 14:23:47,UART output verified
+1,Hello World,Build Success,1,boolean,2026-02-12 15:00:41,Second successful build
+1,Hello World,Execution Success,1,boolean,2026-02-12 15:00:42,UART output verified
