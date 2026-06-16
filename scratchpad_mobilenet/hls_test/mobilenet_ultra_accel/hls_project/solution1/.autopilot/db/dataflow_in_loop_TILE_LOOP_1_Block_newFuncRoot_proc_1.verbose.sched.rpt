@@ -1,0 +1,116 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_TILE_LOOP_1_Block_newFuncRoot_proc_1'
+================================================================
+* Date:           Mon Feb 23 14:55:19 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.006 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%tile_0_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %tile_0" [src/mobilenet_block_accel.cpp:589]   --->   Operation 2 'read' 'tile_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%zext_ln589 = zext i31 %tile_0_read" [src/mobilenet_block_accel.cpp:589]   --->   Operation 3 'zext' 'zext_ln589' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%trunc_ln589 = trunc i31 %tile_0_read" [src/mobilenet_block_accel.cpp:589]   --->   Operation 4 'trunc' 'trunc_ln589' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.28ns)   --->   "%xor_ln590 = xor i1 %trunc_ln589, i1 1" [src/mobilenet_block_accel.cpp:590]   --->   Operation 5 'xor' 'xor_ln590' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%add_ln593 = add i32 %zext_ln589, i32 4294967295" [src/mobilenet_block_accel.cpp:593]   --->   Operation 6 'add' 'add_ln593' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%icmp_ln634 = icmp_ne  i31 %tile_0_read, i31 0" [src/mobilenet_block_accel.cpp:634]   --->   Operation 7 'icmp' 'icmp_ln634' <Predicate = true> <Delay = 1.00> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mrv = insertvalue i35 <undef>, i1 %xor_ln590" [src/mobilenet_block_accel.cpp:590]   --->   Operation 8 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i35 %mrv, i32 %add_ln593" [src/mobilenet_block_accel.cpp:590]   --->   Operation 9 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i35 %mrv_1, i1 %xor_ln590" [src/mobilenet_block_accel.cpp:590]   --->   Operation 10 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i35 %mrv_2, i1 %icmp_ln634" [src/mobilenet_block_accel.cpp:590]   --->   Operation 11 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ret_ln590 = ret i35 %mrv_3" [src/mobilenet_block_accel.cpp:590]   --->   Operation 12 'ret' 'ret_ln590' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.006ns
+The critical path consists of the following:
+	wire read operation ('tile_0_read', src/mobilenet_block_accel.cpp:589) on port 'tile_0' (src/mobilenet_block_accel.cpp:589) [2]  (0.000 ns)
+	'add' operation 32 bit ('add_ln593', src/mobilenet_block_accel.cpp:593) [6]  (1.006 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

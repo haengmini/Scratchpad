@@ -1,0 +1,7 @@
+# ninja log v5
+18	28	0	clean	ba7099f5bbbd715f
+16	326	7932720324276668	CMakeFiles/memcopy_app.elf.dir/main.c.obj	43723c02e838b8ad
+14	171	7932723122150935	build.ninja	2e347147e903bf88
+326	526	7932720325792971	memcopy_app.elf	61cd0da0839a0a51
+18	314	7932723126756147	CMakeFiles/memcopy_app.elf.dir/main.c.obj	43723c02e838b8ad
+315	519	7932723128263152	memcopy_app.elf	61cd0da0839a0a51

@@ -1,0 +1,8 @@
+{
+  "name": "mobilenet_final",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "hlsConfiguration": "hls_config.cfg"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "0": {
+    "basicblocks": 15,
+    "calls": "2 2 1 1",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 473,
+    "instructions": 65,
+    "name": "mobilenet_block_accel",
+    "total_instructions": 1149
+  },
+  "1": {
+    "basicblocks": 74,
+    "calls": "3",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 319,
+    "instructions": 203,
+    "loads": {
+      "L": 7
+    },
+    "name": "pw_row_stage",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 222
+  },
+  "2": {
+    "basicblocks": 85,
+    "calls": "4 5",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 143,
+    "instructions": 300,
+    "loads": {
+      "L": 12
+    },
+    "name": "dw_row_stage",
+    "stores": {
+      "L": 17
+    },
+    "total_instructions": 320
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 98,
+    "instructions": 19,
+    "name": "pw_requantize",
+    "total_instructions": 19
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 76,
+    "instructions": 10,
+    "name": "dw_round_shift",
+    "total_instructions": 10
+  },
+  "5": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 87,
+    "instructions": 10,
+    "name": "clamp_u8",
+    "total_instructions": 10
+  }
+}

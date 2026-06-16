@@ -1,0 +1,3 @@
+D:/Lab/scratchpad_mobilenet/mobilenet/mobilenet_app/build/CMakeFiles/mobilenet_app.elf.dir
+D:/Lab/scratchpad_mobilenet/mobilenet/mobilenet_app/build/CMakeFiles/edit_cache.dir
+D:/Lab/scratchpad_mobilenet/mobilenet/mobilenet_app/build/CMakeFiles/rebuild_cache.dir

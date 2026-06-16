@@ -1,0 +1,11 @@
+# ninja log v5
+28	357	7925943593765199	CMakeFiles/sd_img_loader.elf.dir/main.c.obj	e18a6d5c441ee445
+19	302	7925943593222301	CMakeFiles/sd_img_loader.elf.dir/bmp_loader.c.obj	1c631904d3f5ca7a
+35	338	7925943593559113	CMakeFiles/sd_img_loader.elf.dir/sd_io.c.obj	fc9db849bc98b349
+19	187	7925945070498935	build.ninja	d6df04baa29abb3c
+32	44	0	clean	ba7099f5bbbd715f
+357	638	7925943596103768	sd_img_loader.elf	6e0e8affe86f7999
+28	443	7925945077503097	CMakeFiles/sd_img_loader.elf.dir/bmp_loader.c.obj	1c631904d3f5ca7a
+38	445	7925945077513110	CMakeFiles/sd_img_loader.elf.dir/main.c.obj	e18a6d5c441ee445
+46	465	7925945077743057	CMakeFiles/sd_img_loader.elf.dir/sd_io.c.obj	fc9db849bc98b349
+465	1006	7925945082128629	sd_img_loader.elf	6e0e8affe86f7999

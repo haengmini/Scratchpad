@@ -1,0 +1,3 @@
+D:/Lab/scratchpad_mobilenet/hls/memcpy_accel/memcopy_app/build/CMakeFiles/memcopy_app.elf.dir
+D:/Lab/scratchpad_mobilenet/hls/memcpy_accel/memcopy_app/build/CMakeFiles/edit_cache.dir
+D:/Lab/scratchpad_mobilenet/hls/memcpy_accel/memcopy_app/build/CMakeFiles/rebuild_cache.dir

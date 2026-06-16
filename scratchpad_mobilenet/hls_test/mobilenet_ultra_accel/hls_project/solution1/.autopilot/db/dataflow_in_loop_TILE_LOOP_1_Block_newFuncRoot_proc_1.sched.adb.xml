@@ -1,0 +1,189 @@
+<stg><name>dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc.1</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="31" op_0_bw="31" op_1_bw="31">
+<![CDATA[
+newFuncRoot:0 %tile_0_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %tile_0
+
+]]></Node>
+<StgValue><ssdm name="tile_0_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="31">
+<![CDATA[
+newFuncRoot:1 %zext_ln589 = zext i31 %tile_0_read
+
+]]></Node>
+<StgValue><ssdm name="zext_ln589"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="1" op_0_bw="31">
+<![CDATA[
+newFuncRoot:2 %trunc_ln589 = trunc i31 %tile_0_read
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln589"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>LogicGate</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+newFuncRoot:3 %xor_ln590 = xor i1 %trunc_ln589, i1 1
+
+]]></Node>
+<StgValue><ssdm name="xor_ln590"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+newFuncRoot:4 %add_ln593 = add i32 %zext_ln589, i32 4294967295
+
+]]></Node>
+<StgValue><ssdm name="add_ln593"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="1" op_0_bw="31" op_1_bw="31">
+<![CDATA[
+newFuncRoot:5 %icmp_ln634 = icmp_ne  i31 %tile_0_read, i31 0
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln634"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="35" op_0_bw="35" op_1_bw="1">
+<![CDATA[
+newFuncRoot:6 %mrv = insertvalue i35 <undef>, i1 %xor_ln590
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="35" op_0_bw="35" op_1_bw="32">
+<![CDATA[
+newFuncRoot:7 %mrv_1 = insertvalue i35 %mrv, i32 %add_ln593
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="35" op_0_bw="35" op_1_bw="1">
+<![CDATA[
+newFuncRoot:8 %mrv_2 = insertvalue i35 %mrv_1, i1 %xor_ln590
+
+]]></Node>
+<StgValue><ssdm name="mrv_2"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="35" op_0_bw="35" op_1_bw="1">
+<![CDATA[
+newFuncRoot:9 %mrv_3 = insertvalue i35 %mrv_2, i1 %icmp_ln634
+
+]]></Node>
+<StgValue><ssdm name="mrv_3"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="0" op_0_bw="35">
+<![CDATA[
+newFuncRoot:10 %ret_ln590 = ret i35 %mrv_3
+
+]]></Node>
+<StgValue><ssdm name="ret_ln590"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

@@ -1,0 +1,3 @@
+relativeroot=d:/Lab/scratchpad/hls_test/mobilenet_ultra_accel
+original_argv=--mode hls --impl --config hls_config.cfg --work_dir hls_work 
+

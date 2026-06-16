@@ -1,0 +1,17 @@
+[Vitis 디버깅 에러 분석 및 해결 보고서]
+
+1. 로그 분석 결과
+   - 로그 파일: hello_world/_ide/logs/ide.log, vitis.log
+   - 에러 메시지: "Failed to start debug session" 및 초기화 관련 충돌 징후 포착.
+   - 원인 1 (중복 초기화): `launch.json` 설정에서 `initWithFSBL: true`와 `runPsuInit: true`가 동시에 활성화되어 있었습니다. ZynqMP 플랫폼에서는 FSBL(First Stage Boot Loader)이 하드웨어(DDR, Clock 등) 초기화를 담당하므로, `psu_init.tcl` 스크립트를 추가로 실행하면 하드웨어 설정 충돌이 발생할 수 있습니다.
+   - 원인 2 (타이밍 문제): `stopAtEntry: false`로 설정되어 있어, "Hello World"와 같이 실행 시간이 매우 짧은 프로그램은 디버거가 연결되기도 전에 실행이 종료되거나 main 함수를 지나쳐버려 디버깅 세션 연결에 실패할 수 있습니다.
+
+2. 조치 사항 (launch.json 수정 완료)
+   - 파일 경로: D:\Lab\scratchpad\zcu104\hello_world\hello_world_app\_ide\launch.json
+   - 수정 1: `runPsuInit` 값을 `false`로 변경하여 불필요한 중복 초기화 스크립트 실행을 비활성화했습니다. (FSBL이 초기화를 전담)
+   - 수정 2: `stopAtEntry` 값을 `true`로 변경하여, 프로그램 다운로드 후 main 함수 진입점에서 자동으로 멈추도록 설정했습니다. 이를 통해 디버거가 안정적으로 연결될 수 있는 상태를 보장합니다.
+
+3. 향후 권장 사항
+   - 이제 Vitis에서 다시 디버그(Debug) 버튼을 눌러 실행해 보십시오.
+   - 초기화 에러 없이 main 함수 시작 지점에서 프로세서가 정지(Suspend)해 있을 것입니다.
+   - 이후 'Resume' (F8) 버튼을 눌러 프로그램을 진행하거나, 'Step Over' (F6) 기능을 사용하여 한 줄씩 디버깅하시면 됩니다.

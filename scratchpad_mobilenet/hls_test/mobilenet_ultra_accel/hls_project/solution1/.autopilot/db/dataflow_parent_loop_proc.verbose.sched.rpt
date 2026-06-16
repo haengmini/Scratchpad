@@ -1,0 +1,173 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_parent_loop_proc'
+================================================================
+* Date:           Mon Feb 23 14:55:29 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- TILE_LOOP  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 3, States = { 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem_out, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 1605632, void @empty_1, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_pw_w, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 262144, void @empty_0, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_dw_w, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 2304, void @empty, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem_in, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 1605632, void @empty_43, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%pw_use_bias_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_use_bias"   --->   Operation 9 'read' 'pw_use_bias_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%pw_M_shift_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_shift"   --->   Operation 10 'read' 'pw_M_shift_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%pw_M_mantissa_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_mantissa"   --->   Operation 11 'read' 'pw_M_mantissa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%pw_out_zp_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_out_zp"   --->   Operation 12 'read' 'pw_out_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%pw_wgt_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_wgt_zp"   --->   Operation 13 'read' 'pw_wgt_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%pw_act_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_act_zp"   --->   Operation 14 'read' 'pw_act_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%c_out_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_out"   --->   Operation 15 'read' 'c_out_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_r"   --->   Operation 16 'read' 'output_r_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%pw_bias_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_bias"   --->   Operation 17 'read' 'pw_bias_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%pw_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_weights"   --->   Operation 18 'read' 'pw_weights_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%dw_apply_relu6_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %dw_apply_relu6"   --->   Operation 19 'read' 'dw_apply_relu6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%dw_shift_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %dw_shift"   --->   Operation 20 'read' 'dw_shift_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%dw_multiplier_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %dw_multiplier"   --->   Operation 21 'read' 'dw_multiplier_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%dw_out_zp_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %dw_out_zp"   --->   Operation 22 'read' 'dw_out_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%dw_w_zp_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %dw_w_zp"   --->   Operation 23 'read' 'dw_w_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%dw_in_zp_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %dw_in_zp"   --->   Operation 24 'read' 'dw_in_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%c_in_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_in"   --->   Operation 25 'read' 'c_in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %width"   --->   Operation 26 'read' 'width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %height"   --->   Operation 27 'read' 'height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%dw_bias_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %dw_bias"   --->   Operation 28 'read' 'dw_bias_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%dw_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %dw_weights"   --->   Operation 29 'read' 'dw_weights_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%input_r_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %input_r"   --->   Operation 30 'read' 'input_r_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%add1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %add1"   --->   Operation 31 'read' 'add1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.42ns)   --->   "%br_ln0 = br void %for.cond"   --->   Operation 32 'br' 'br_ln0' <Predicate = true> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.01>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tile = phi i31 0, void %newFuncRoot, i31 %add_ln586, void %codeRepl" [src/mobilenet_block_accel.cpp:586]   --->   Operation 33 'phi' 'tile' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln586 = zext i31 %tile" [src/mobilenet_block_accel.cpp:586]   --->   Operation 34 'zext' 'zext_ln586' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (1.01ns)   --->   "%icmp_ln586 = icmp_slt  i32 %zext_ln586, i32 %add1_read" [src/mobilenet_block_accel.cpp:586]   --->   Operation 35 'icmp' 'icmp_ln586' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (1.00ns)   --->   "%add_ln586 = add i31 %tile, i31 1" [src/mobilenet_block_accel.cpp:586]   --->   Operation 36 'add' 'add_ln586' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln586 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @dataflow_parent_loop_str, i31 %tile, i32 %add1, i32 0" [src/mobilenet_block_accel.cpp:586]   --->   Operation 37 'specdataflowpipeline' 'specdataflowpipeline_ln586' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln586 = br i1 %icmp_ln586, void %for.end.exitStub, void %codeRepl" [src/mobilenet_block_accel.cpp:586]   --->   Operation 38 'br' 'br_ln586' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 39 'ret' 'ret_ln0' <Predicate = (!icmp_ln586)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.27>
+ST_3 : Operation 40 [2/2] (7.27ns)   --->   "%call_ln589 = call void @dataflow_in_loop_TILE_LOOP.1, i31 %tile, i8 %gmem_in, i64 %input_r_read, i32 %gmem_dw_w, i64 %dw_weights_read, i64 %dw_bias_read, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %dw_in_zp_read, i32 %dw_w_zp_read, i32 %dw_out_zp_read, i32 %dw_multiplier_read, i32 %dw_shift_read, i32 %dw_apply_relu6_read, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_r_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15" [src/mobilenet_block_accel.cpp:589]   --->   Operation 40 'call' 'call_ln589' <Predicate = (icmp_ln586)> <Delay = 7.27> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%specloopname_ln586 = specloopname void @_ssdm_op_SpecLoopName, void @empty_30" [src/mobilenet_block_accel.cpp:586]   --->   Operation 41 'specloopname' 'specloopname_ln586' <Predicate = (icmp_ln586)> <Delay = 0.00>
+ST_4 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln589 = call void @dataflow_in_loop_TILE_LOOP.1, i31 %tile, i8 %gmem_in, i64 %input_r_read, i32 %gmem_dw_w, i64 %dw_weights_read, i64 %dw_bias_read, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %dw_in_zp_read, i32 %dw_w_zp_read, i32 %dw_out_zp_read, i32 %dw_multiplier_read, i32 %dw_shift_read, i32 %dw_apply_relu6_read, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_r_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15" [src/mobilenet_block_accel.cpp:589]   --->   Operation 42 'call' 'call_ln589' <Predicate = (icmp_ln586)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln586 = br void %for.cond" [src/mobilenet_block_accel.cpp:586]   --->   Operation 43 'br' 'br_ln586' <Predicate = (icmp_ln586)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 31 bit ('tile', src/mobilenet_block_accel.cpp:586) with incoming values : ('add_ln586', src/mobilenet_block_accel.cpp:586) [89]  (0.427 ns)
+
+ <State 2>: 1.016ns
+The critical path consists of the following:
+	'phi' operation 31 bit ('tile', src/mobilenet_block_accel.cpp:586) with incoming values : ('add_ln586', src/mobilenet_block_accel.cpp:586) [89]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln586', src/mobilenet_block_accel.cpp:586) [91]  (1.016 ns)
+
+ <State 3>: 7.280ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln589', src/mobilenet_block_accel.cpp:589) to 'dataflow_in_loop_TILE_LOOP.1' [97]  (7.280 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "mobilenet_block_accel",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "mobilenet_block_accel"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "D:/Lab/scratchpad/hls_test/mobilenet_ultra_accel/run_synth.tcl",
+    "sourceLine": 11,
+    "success": true
+  }
+]

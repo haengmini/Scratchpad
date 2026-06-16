@@ -1,0 +1,50 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "3",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 473,
+    "instructions": 108,
+    "name": "mobilenet_block_accel",
+    "total_instructions": 7659
+  },
+  "1": {
+    "basicblocks": 53,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 143,
+    "instructions": 380,
+    "loads": {
+      "L": 7
+    },
+    "name": "dw_row_stage",
+    "stores": {
+      "L": 25
+    },
+    "total_instructions": 380
+  },
+  "2": {
+    "basicblocks": 391,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 319,
+    "instructions": 3386,
+    "loads": {
+      "L": 304
+    },
+    "name": "pw_row_stage",
+    "stores": {
+      "L": 288
+    },
+    "total_instructions": 3386
+  },
+  "3": {
+    "basicblocks": 9,
+    "calls": "1 1 2 2",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 0,
+    "instructions": 19,
+    "name": "_Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii_for.body",
+    "total_instructions": 7551
+  }
+}

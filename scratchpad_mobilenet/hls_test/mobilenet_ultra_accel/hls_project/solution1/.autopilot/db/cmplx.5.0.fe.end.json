@@ -1,0 +1,224 @@
+{
+    "1": {
+        "name": "_Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii_for.body",
+        "file": "mobilenet_block_accel.cpp",
+        "fileloc": "0",
+        "instructions": "36",
+        "total_instructions": "6695",
+        "calls": "14 8 10",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "pw_row_stage_Pipeline_PW_LOAD_IN",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "370",
+        "instructions": "105",
+        "total_instructions": "105",
+        "calls": "",
+        "basicblocks": "21",
+        "loads": {
+            "G": "16",
+            "L": "1"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "mobilenet_block_accel",
+        "file": "mobilenet_block_accel.cpp",
+        "fileloc": "473",
+        "instructions": "97",
+        "total_instructions": "6830",
+        "calls": "12",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "dw_row_stage_Pipeline_DW_LOOP_W",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "244",
+        "instructions": "210",
+        "total_instructions": "210",
+        "calls": "",
+        "basicblocks": "21",
+        "loads": {
+            "L": "14"
+        },
+        "stores": {
+            "G": "16",
+            "L": "19"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "dw_row_stage_Pipeline_DW_INIT_LB",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "204",
+        "instructions": "63",
+        "total_instructions": "63",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "pw_row_stage",
+        "file": "mobilenet_block_accel.cpp",
+        "fileloc": "319",
+        "instructions": "956",
+        "total_instructions": "2672",
+        "calls": "2 11 13",
+        "basicblocks": "78",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "2"
+        }
+    },
+    "6": {
+        "name": "dw_row_stage_Pipeline_DW_INIT_WIN",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "171",
+        "instructions": "65",
+        "total_instructions": "65",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "13"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "dw_row_stage",
+        "file": "mobilenet_block_accel.cpp",
+        "fileloc": "143",
+        "instructions": "175",
+        "total_instructions": "628",
+        "calls": "9 4 6 3",
+        "basicblocks": "7",
+        "loads": {
+            "L": "37"
+        },
+        "stores": {
+            "L": "17"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "615",
+        "instructions": "22",
+        "total_instructions": "1278",
+        "calls": "7 7",
+        "basicblocks": "4"
+    },
+    "9": {
+        "name": "dw_row_stage_Pipeline_DW_LOAD_W_VITIS_LOOP_187_1",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "175",
+        "instructions": "115",
+        "total_instructions": "115",
+        "calls": "",
+        "basicblocks": "17",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "634",
+        "instructions": "26",
+        "total_instructions": "5370",
+        "calls": "5 5",
+        "basicblocks": "6"
+    },
+    "11": {
+        "name": "pw_row_stage_Pipeline_PW_LOAD_WGT_CI",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "387",
+        "instructions": "836",
+        "total_instructions": "836",
+        "calls": "",
+        "basicblocks": "293",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "258"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "dataflow_parent_loop_proc",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "586",
+        "instructions": "38",
+        "total_instructions": "6733",
+        "calls": "1",
+        "basicblocks": "4",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "pw_row_stage_Pipeline_PW_DOT_PROD",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "411",
+        "instructions": "775",
+        "total_instructions": "775",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "305"
+        },
+        "stores": {
+            "L": "34"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc.1",
+        "file": "src\/mobilenet_block_accel.cpp",
+        "fileloc": "589",
+        "instructions": "11",
+        "total_instructions": "11",
+        "calls": "",
+        "basicblocks": "1"
+    }
+}

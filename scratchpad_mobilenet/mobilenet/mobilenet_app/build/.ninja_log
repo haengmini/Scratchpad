@@ -1,0 +1,9 @@
+# ninja log v5
+16	907	7932581352318346	CMakeFiles/mobilenet_app.elf.dir/D_/Lab/scratchpad_mobilenet/mobilenet/mobilenet_app/mobilenet_bm.cpp.obj	3a83375b9f2060a7
+908	1178	7932581354663320	mobilenet_app.elf	a44752e11175ea12
+24	154	7932581344841855	CMakeFiles/mobilenet_app.elf.dir/D_/Lab/scratchpad_mobilenet/mobilenet/mobilenet_app/ref_kernels.c.obj	198aae1193fe5379
+21	30	0	clean	ba7099f5bbbd715f
+17	152	7932642756152448	build.ninja	b93da7f335397e2d
+29	373	7932642761286696	CMakeFiles/mobilenet_app.elf.dir/D_/Lab/scratchpad_mobilenet/mobilenet/mobilenet_app/ref_kernels.c.obj	198aae1193fe5379
+19	1159	7932642769144243	CMakeFiles/mobilenet_app.elf.dir/D_/Lab/scratchpad_mobilenet/mobilenet/mobilenet_app/mobilenet_bm.cpp.obj	3a83375b9f2060a7
+1160	1455	7932642771652561	mobilenet_app.elf	a44752e11175ea12

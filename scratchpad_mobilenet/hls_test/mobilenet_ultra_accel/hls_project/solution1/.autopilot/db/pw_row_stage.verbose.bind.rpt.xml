@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'pw_row_stage'" level="0">
+<item name = "Date">Mon Feb 23 14:55:28 2026
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">hls_project</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_pw_row_stage_Pipeline_PW_LOAD_IN_fu_2168">pw_row_stage_Pipeline_PW_LOAD_IN, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_pw_row_stage_Pipeline_PW_LOAD_WGT_CI_fu_2222">pw_row_stage_Pipeline_PW_LOAD_WGT_CI, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_pw_row_stage_Pipeline_PW_DOT_PROD_fu_2488">pw_row_stage_Pipeline_PW_DOT_PROD, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- PW_LOOP_W">?, ?, ?, -, -, ?, no</column>
+<column name=" + PW_LOOP_CO_TILE">?, ?, ?, -, -, 1 ~ 268435456, no</column>
+<column name="  ++ PW_LOAD_WGT">?, ?, ?, -, -, 16, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

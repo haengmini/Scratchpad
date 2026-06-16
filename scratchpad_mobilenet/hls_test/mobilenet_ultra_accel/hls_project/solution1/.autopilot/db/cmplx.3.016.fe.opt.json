@@ -1,0 +1,83 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "4",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 473,
+    "instructions": 145,
+    "name": "mobilenet_block_accel",
+    "total_instructions": 7909
+  },
+  "1": {
+    "basicblocks": 59,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 143,
+    "instructions": 410,
+    "loads": {
+      "L": 8
+    },
+    "name": "dw_row_stage",
+    "stores": {
+      "L": 25
+    },
+    "total_instructions": 410
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 0,
+    "instructions": 10,
+    "name": "dataflow_in_loop_TILE_LOOP.1_",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 10
+  },
+  "3": {
+    "basicblocks": 6,
+    "calls": "6 6",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 0,
+    "instructions": 10,
+    "name": "dataflow_in_loop_TILE_LOOP.1_if.end.aft.aft",
+    "total_instructions": 6914
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "2 5 3",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 0,
+    "instructions": 13,
+    "loads": {
+      "L": 4
+    },
+    "name": "_Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii_for.body",
+    "total_instructions": 7764
+  },
+  "5": {
+    "basicblocks": 4,
+    "calls": "1 1",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 0,
+    "instructions": 7,
+    "name": "dataflow_in_loop_TILE_LOOP.1_newFuncRoot.aft",
+    "total_instructions": 827
+  },
+  "6": {
+    "basicblocks": 393,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 319,
+    "instructions": 3452,
+    "loads": {
+      "L": 305
+    },
+    "name": "pw_row_stage",
+    "stores": {
+      "L": 288
+    },
+    "total_instructions": 3452
+  }
+}

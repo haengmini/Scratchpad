@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_TILE_LOOP_1_Block_if_end_aft_proc'
+================================================================
+* Date:           Mon Feb 23 14:55:28 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.25>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_pw_w, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 262144, void @empty_0, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem_out, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 1605632, void @empty_1, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%pw_use_bias_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_use_bias" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 5 'read' 'pw_use_bias_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%pw_M_shift_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_shift" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 6 'read' 'pw_M_shift_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%pw_M_mantissa_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_mantissa" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 7 'read' 'pw_M_mantissa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%pw_out_zp_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_out_zp" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 8 'read' 'pw_out_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%pw_wgt_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_wgt_zp" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 9 'read' 'pw_wgt_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%pw_act_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_act_zp" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 10 'read' 'pw_act_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%c_out_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_out" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 11 'read' 'c_out_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%c_in_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_in" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 12 'read' 'c_in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %width" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 13 'read' 'width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %height" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 14 'read' 'height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.83ns)   --->   "%p_read_2 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read2" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 15 'read' 'p_read_2' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_r" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 16 'read' 'output_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%pw_bias_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_bias" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 17 'read' 'pw_bias_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%pw_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_weights" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 18 'read' 'pw_weights_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.83ns)   --->   "%p_read_3 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %p_read1" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 19 'read' 'p_read_3' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 20 [1/1] (1.83ns)   --->   "%p_read_4 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %p_read" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 20 'read' 'p_read_4' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln634 = br i1 %p_read_4, void %dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc.exit, void %if.then7.i.i" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 21 'br' 'br_ln634' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln635 = br i1 %p_read_3, void %if.then9.i.i, void %if.else10.i.i" [src/mobilenet_block_accel.cpp:635->src/mobilenet_block_accel.cpp:634]   --->   Operation 22 'br' 'br_ln635' <Predicate = (p_read_4)> <Delay = 0.00>
+ST_1 : Operation 23 [2/2] (3.42ns)   --->   "%call_ln636 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:636->src/mobilenet_block_accel.cpp:634]   --->   Operation 23 'call' 'call_ln636' <Predicate = (p_read_4 & !p_read_3)> <Delay = 3.42> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 24 [2/2] (3.42ns)   --->   "%call_ln644 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:644->src/mobilenet_block_accel.cpp:634]   --->   Operation 24 'call' 'call_ln644' <Predicate = (p_read_4 & p_read_3)> <Delay = 3.42> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln636 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:636->src/mobilenet_block_accel.cpp:634]   --->   Operation 25 'call' 'call_ln636' <Predicate = (p_read_4 & !p_read_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln643 = br void %if.end11.i.i" [src/mobilenet_block_accel.cpp:643->src/mobilenet_block_accel.cpp:634]   --->   Operation 26 'br' 'br_ln643' <Predicate = (p_read_4 & !p_read_3)> <Delay = 0.00>
+ST_2 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln644 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:644->src/mobilenet_block_accel.cpp:634]   --->   Operation 27 'call' 'call_ln644' <Predicate = (p_read_4 & p_read_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end11.i.i"   --->   Operation 28 'br' 'br_ln0' <Predicate = (p_read_4 & p_read_3)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln652 = br void %dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc.exit" [src/mobilenet_block_accel.cpp:652->src/mobilenet_block_accel.cpp:634]   --->   Operation 29 'br' 'br_ln652' <Predicate = (p_read_4)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln634 = ret" [src/mobilenet_block_accel.cpp:634]   --->   Operation 30 'ret' 'ret_ln634' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.258ns
+The critical path consists of the following:
+	wire read operation ('p_read_2', src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634) on port 'p_read2' (src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634) [63]  (1.838 ns)
+	'call' operation 0 bit ('call_ln644', src/mobilenet_block_accel.cpp:644->src/mobilenet_block_accel.cpp:634) to 'pw_row_stage' [76]  (3.420 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
