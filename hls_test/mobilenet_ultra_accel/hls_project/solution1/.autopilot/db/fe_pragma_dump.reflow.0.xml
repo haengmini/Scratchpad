@@ -1,0 +1,59 @@
+<pragmas>
+<pragma file="src/mobilenet_block_accel.cpp" line="105" pragmaType="inline" parentfunction="pw_requantize" off="0" region="0" recursive="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="78" pragmaType="inline" parentfunction="dw_round_shift" off="0" region="0" recursive="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="159" pragmaType="inline" parentfunction="dw_row_stage" off="1" region="0" recursive="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="205" pragmaType="pipeline" parentfunction="dw_row_stage" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="188" pragmaType="pipeline" parentfunction="dw_row_stage" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="231" pragmaType="unroll" parentfunction="dw_row_stage" factor="-1" skip_exit_check="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="245" pragmaType="pipeline" parentfunction="dw_row_stage" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="261" pragmaType="unroll" parentfunction="dw_row_stage" factor="-1" skip_exit_check="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="272" pragmaType="unroll" parentfunction="dw_row_stage" factor="-1" skip_exit_check="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="274" pragmaType="unroll" parentfunction="dw_row_stage" factor="-1" skip_exit_check="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="168" pragmaType="array_partition" parentfunction="dw_row_stage" dim="1" factor="0" mode="complete" dynamic="0" variable="line_buf"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="172" pragmaType="array_partition" parentfunction="dw_row_stage" dim="0" factor="0" mode="complete" dynamic="0" variable="window"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="176" pragmaType="array_partition" parentfunction="dw_row_stage" dim="0" factor="0" mode="complete" dynamic="0" variable="w_cache"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="612" pragmaType="dataflow" parentfunction="mobilenet_block_accel" disable_start_propagation="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="508" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="m_axi" port="input" bundle="gmem_in" offset="slave" name="" depth="1605632" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="509" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="m_axi" port="dw_weights" bundle="gmem_dw_w" offset="slave" name="" depth="9216" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="510" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="m_axi" port="dw_bias" bundle="gmem_dw_w" offset="slave" name="" depth="1024" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="511" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="m_axi" port="pw_weights" bundle="gmem_pw_w" offset="slave" name="" depth="1048576" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="512" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="m_axi" port="pw_bias" bundle="gmem_pw_w" offset="slave" name="" depth="1024" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="513" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="m_axi" port="output" bundle="gmem_out" offset="slave" name="" depth="1605632" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="519" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="input" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="520" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_weights" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="521" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_bias" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="522" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_weights" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="523" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_bias" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="524" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="output" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="525" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="height" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="526" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="width" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="527" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="c_in" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="528" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="c_out" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="530" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_in_zp" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="531" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_w_zp" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="532" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_out_zp" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="533" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_multiplier" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="534" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_shift" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="535" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="dw_apply_relu6" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="537" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_act_zp" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="538" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_wgt_zp" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="539" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_out_zp" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="540" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_M_mantissa" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="541" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_M_shift" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="542" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="pw_use_bias" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="543" pragmaType="interface" parentfunction="mobilenet_block_accel" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="562" pragmaType="array_partition" parentfunction="mobilenet_block_accel" dim="1" factor="16" mode="cyclic" dynamic="0" variable="_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="565" pragmaType="array_partition" parentfunction="mobilenet_block_accel" dim="1" factor="16" mode="cyclic" dynamic="0" variable="_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="89" pragmaType="inline" parentfunction="clamp_u8" off="0" region="0" recursive="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="336" pragmaType="inline" parentfunction="pw_row_stage" off="1" region="0" recursive="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="371" pragmaType="pipeline" parentfunction="pw_row_stage" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="398" pragmaType="unroll" parentfunction="pw_row_stage" factor="-1" skip_exit_check="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="412" pragmaType="pipeline" parentfunction="pw_row_stage" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="431" pragmaType="unroll" parentfunction="pw_row_stage" factor="-1" skip_exit_check="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="388" pragmaType="pipeline" parentfunction="pw_row_stage" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/mobilenet_block_accel.cpp" line="419" pragmaType="unroll" parentfunction="pw_row_stage" factor="-1" skip_exit_check="0"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="344" pragmaType="array_partition" parentfunction="pw_row_stage" dim="1" factor="16" mode="cyclic" dynamic="0" variable="input_buf"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="348" pragmaType="array_partition" parentfunction="pw_row_stage" dim="1" factor="0" mode="complete" dynamic="0" variable="wgt_tile"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="349" pragmaType="array_partition" parentfunction="pw_row_stage" dim="2" factor="16" mode="cyclic" dynamic="0" variable="wgt_tile"/>
+<pragma file="src/mobilenet_block_accel.cpp" line="353" pragmaType="array_partition" parentfunction="pw_row_stage" dim="1" factor="0" mode="complete" dynamic="0" variable="acc_buf"/>
+</pragmas>

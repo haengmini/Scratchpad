@@ -1,0 +1,2033 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_TILE_LOOP_1_Block_if_end_aft_proc'
+================================================================
+* Date:           Mon Feb 23 14:55:42 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+--------------+---------+---------+----------+----------+-----+-----+---------+
+        |                         |              |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |         Instance        |    Module    |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------+--------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_pw_row_stage_fu_228  |pw_row_stage  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------+--------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       8|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        0|    32|    8455|   22665|    0|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     580|    -|
+|Register         |        -|     -|     518|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|    32|    8973|   23253|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     1|       1|      10|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+--------------+---------+----+------+-------+-----+
+    |         Instance        |    Module    | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +-------------------------+--------------+---------+----+------+-------+-----+
+    |grp_pw_row_stage_fu_228  |pw_row_stage  |        0|  32|  8455|  22665|    0|
+    +-------------------------+--------------+---------+----+------+-------+-----+
+    |Total                    |              |        0|  32|  8455|  22665|    0|
+    +-------------------------+--------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |ap_predicate_op25_call_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op27_call_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1                  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_on_subcall_done  |        or|   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0|   8|           4|           4|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                        Name                                       | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                                                          |  14|          3|    1|          3|
+    |ap_done                                                                            |   9|          2|    1|          2|
+    |grp_pw_row_stage_fu_228_inter_buf_0_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_10_q0                                            |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_11_q0                                            |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_12_q0                                            |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_13_q0                                            |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_14_q0                                            |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_15_q0                                            |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_1_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_2_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_3_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_4_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_5_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_6_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_7_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_8_q0                                             |  14|          3|    8|         24|
+    |grp_pw_row_stage_fu_228_inter_buf_9_q0                                             |  14|          3|    8|         24|
+    |m_axi_gmem_out_0_AWVALID                                                           |   9|          2|    1|          2|
+    |m_axi_gmem_out_0_BREADY                                                            |   9|          2|    1|          2|
+    |m_axi_gmem_out_0_WVALID                                                            |   9|          2|    1|          2|
+    |m_axi_gmem_pw_w_0_ARVALID                                                          |   9|          2|    1|          2|
+    |m_axi_gmem_pw_w_0_RREADY                                                           |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19_ce0  |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9_ce0   |   9|          2|    1|          2|
+    |mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_ce0     |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14_ce0   |   9|          2|    1|          2|
+    |p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15_ce0   |   9|          2|    1|          2|
+    +-----------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                              | 580|        127|  167|        463|
+    +-----------------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                             |   2|   0|    2|          0|
+    |ap_done_reg                           |   1|   0|    1|          0|
+    |c_in_read_reg_347                     |  32|   0|   32|          0|
+    |c_out_read_reg_342                    |  32|   0|   32|          0|
+    |grp_pw_row_stage_fu_228_ap_start_reg  |   1|   0|    1|          0|
+    |height_read_reg_357                   |  32|   0|   32|          0|
+    |output_read_reg_367                   |  64|   0|   64|          0|
+    |p_read_2_reg_362                      |  32|   0|   32|          0|
+    |p_read_3_reg_382                      |   1|   0|    1|          0|
+    |p_read_4_reg_386                      |   1|   0|    1|          0|
+    |pw_M_mantissa_read_reg_322            |  32|   0|   32|          0|
+    |pw_M_shift_read_reg_317               |  32|   0|   32|          0|
+    |pw_act_zp_read_reg_337                |  16|   0|   16|          0|
+    |pw_bias_read_reg_372                  |  64|   0|   64|          0|
+    |pw_out_zp_read_reg_327                |  32|   0|   32|          0|
+    |pw_use_bias_read_reg_312              |  32|   0|   32|          0|
+    |pw_weights_read_reg_377               |  64|   0|   64|          0|
+    |pw_wgt_zp_read_reg_332                |  16|   0|   16|          0|
+    |width_read_reg_352                    |  32|   0|   32|          0|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 518|   0|  518|          0|
+    +--------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
+|                                        RTL Ports                                       | Dir | Bits|  Protocol  |                                 Source Object                                 |    C Type    |
++----------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
+|ap_clk                                                                                  |   in|    1|  ap_ctrl_hs|                             dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc|  return value|
+|ap_rst                                                                                  |   in|    1|  ap_ctrl_hs|                             dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc|  return value|
+|ap_start                                                                                |   in|    1|  ap_ctrl_hs|                             dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc|  return value|
+|ap_done                                                                                 |  out|    1|  ap_ctrl_hs|                             dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc|  return value|
+|ap_continue                                                                             |   in|    1|  ap_ctrl_hs|                             dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc|  return value|
+|ap_idle                                                                                 |  out|    1|  ap_ctrl_hs|                             dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc|  return value|
+|ap_ready                                                                                |  out|    1|  ap_ctrl_hs|                             dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc|  return value|
+|p_read                                                                                  |   in|    1|     ap_none|                                                                         p_read|        scalar|
+|p_read1                                                                                 |   in|    1|     ap_none|                                                                        p_read1|        scalar|
+|m_axi_gmem_pw_w_0_AWVALID                                                               |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWREADY                                                               |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWADDR                                                                |  out|   64|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWID                                                                  |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWLEN                                                                 |  out|   32|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWSIZE                                                                |  out|    3|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWBURST                                                               |  out|    2|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWLOCK                                                                |  out|    2|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWCACHE                                                               |  out|    4|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWPROT                                                                |  out|    3|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWQOS                                                                 |  out|    4|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWREGION                                                              |  out|    4|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_AWUSER                                                                |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_WVALID                                                                |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_WREADY                                                                |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_WDATA                                                                 |  out|   32|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_WSTRB                                                                 |  out|    4|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_WLAST                                                                 |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_WID                                                                   |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_WUSER                                                                 |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARVALID                                                               |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARREADY                                                               |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARADDR                                                                |  out|   64|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARID                                                                  |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARLEN                                                                 |  out|   32|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARSIZE                                                                |  out|    3|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARBURST                                                               |  out|    2|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARLOCK                                                                |  out|    2|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARCACHE                                                               |  out|    4|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARPROT                                                                |  out|    3|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARQOS                                                                 |  out|    4|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARREGION                                                              |  out|    4|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_ARUSER                                                                |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RVALID                                                                |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RREADY                                                                |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RDATA                                                                 |   in|   32|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RLAST                                                                 |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RID                                                                   |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RFIFONUM                                                              |   in|    9|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RUSER                                                                 |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_RRESP                                                                 |   in|    2|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_BVALID                                                                |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_BREADY                                                                |  out|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_BRESP                                                                 |   in|    2|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_BID                                                                   |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|m_axi_gmem_pw_w_0_BUSER                                                                 |   in|    1|       m_axi|                                                                      gmem_pw_w|       pointer|
+|pw_weights                                                                              |   in|   64|     ap_none|                                                                     pw_weights|        scalar|
+|pw_bias                                                                                 |   in|   64|     ap_none|                                                                        pw_bias|        scalar|
+|m_axi_gmem_out_0_AWVALID                                                                |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWREADY                                                                |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWADDR                                                                 |  out|   64|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWID                                                                   |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWLEN                                                                  |  out|   32|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWSIZE                                                                 |  out|    3|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWBURST                                                                |  out|    2|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWLOCK                                                                 |  out|    2|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWCACHE                                                                |  out|    4|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWPROT                                                                 |  out|    3|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWQOS                                                                  |  out|    4|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWREGION                                                               |  out|    4|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_AWUSER                                                                 |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_WVALID                                                                 |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_WREADY                                                                 |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_WDATA                                                                  |  out|    8|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_WSTRB                                                                  |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_WLAST                                                                  |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_WID                                                                    |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_WUSER                                                                  |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARVALID                                                                |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARREADY                                                                |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARADDR                                                                 |  out|   64|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARID                                                                   |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARLEN                                                                  |  out|   32|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARSIZE                                                                 |  out|    3|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARBURST                                                                |  out|    2|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARLOCK                                                                 |  out|    2|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARCACHE                                                                |  out|    4|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARPROT                                                                 |  out|    3|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARQOS                                                                  |  out|    4|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARREGION                                                               |  out|    4|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_ARUSER                                                                 |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RVALID                                                                 |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RREADY                                                                 |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RDATA                                                                  |   in|    8|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RLAST                                                                  |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RID                                                                    |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RFIFONUM                                                               |   in|   11|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RUSER                                                                  |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_RRESP                                                                  |   in|    2|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_BVALID                                                                 |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_BREADY                                                                 |  out|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_BRESP                                                                  |   in|    2|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_BID                                                                    |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|m_axi_gmem_out_0_BUSER                                                                  |   in|    1|       m_axi|                                                                       gmem_out|       pointer|
+|output_r                                                                                |   in|   64|     ap_none|                                                                       output_r|        scalar|
+|p_read2                                                                                 |   in|   32|     ap_none|                                                                        p_read2|        scalar|
+|height                                                                                  |   in|   32|     ap_none|                                                                         height|        scalar|
+|width                                                                                   |   in|   32|     ap_none|                                                                          width|        scalar|
+|c_in                                                                                    |   in|   32|     ap_none|                                                                           c_in|        scalar|
+|c_out                                                                                   |   in|   32|     ap_none|                                                                          c_out|        scalar|
+|pw_act_zp                                                                               |   in|   16|     ap_none|                                                                      pw_act_zp|        scalar|
+|pw_wgt_zp                                                                               |   in|   16|     ap_none|                                                                      pw_wgt_zp|        scalar|
+|pw_out_zp                                                                               |   in|   32|     ap_none|                                                                      pw_out_zp|        scalar|
+|pw_M_mantissa                                                                           |   in|   32|     ap_none|                                                                  pw_M_mantissa|        scalar|
+|pw_M_shift                                                                              |   in|   32|     ap_none|                                                                     pw_M_shift|        scalar|
+|pw_use_bias                                                                             |   in|   32|     ap_none|                                                                    pw_use_bias|        scalar|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1_address0   |  out|   13|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1_ce0        |  out|    1|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1_q0         |   in|    8|   ap_memory|   mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_address0     |  out|   13|   ap_memory|     mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_ce0          |  out|    1|   ap_memory|     mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_q0           |   in|    8|   ap_memory|     mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10_address0  |  out|   13|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10_ce0       |  out|    1|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10|         array|
+|mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10_q0        |   in|    8|   ap_memory|  mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15_address0   |  out|   13|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15_ce0        |  out|    1|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15|         array|
+|p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15_q0         |   in|    8|   ap_memory|   p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15|         array|
++----------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.25>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_pw_w, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 262144, void @empty_0, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem_out, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 1605632, void @empty_1, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%pw_use_bias_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_use_bias" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 5 'read' 'pw_use_bias_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%pw_M_shift_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_shift" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 6 'read' 'pw_M_shift_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%pw_M_mantissa_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_mantissa" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 7 'read' 'pw_M_mantissa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%pw_out_zp_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_out_zp" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 8 'read' 'pw_out_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%pw_wgt_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_wgt_zp" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 9 'read' 'pw_wgt_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%pw_act_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_act_zp" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 10 'read' 'pw_act_zp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%c_out_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_out" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 11 'read' 'c_out_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%c_in_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_in" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 12 'read' 'c_in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %width" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 13 'read' 'width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %height" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 14 'read' 'height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.83ns)   --->   "%p_read_2 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read2" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 15 'read' 'p_read_2' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_r" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 16 'read' 'output_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%pw_bias_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_bias" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 17 'read' 'pw_bias_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%pw_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_weights" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 18 'read' 'pw_weights_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.83ns)   --->   "%p_read_3 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %p_read1" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 19 'read' 'p_read_3' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 20 [1/1] (1.83ns)   --->   "%p_read_4 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %p_read" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 20 'read' 'p_read_4' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln634 = br i1 %p_read_4, void %dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc.exit, void %if.then7.i.i" [src/mobilenet_block_accel.cpp:634->src/mobilenet_block_accel.cpp:634]   --->   Operation 21 'br' 'br_ln634' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln635 = br i1 %p_read_3, void %if.then9.i.i, void %if.else10.i.i" [src/mobilenet_block_accel.cpp:635->src/mobilenet_block_accel.cpp:634]   --->   Operation 22 'br' 'br_ln635' <Predicate = (p_read_4)> <Delay = 0.00>
+ST_1 : Operation 23 [2/2] (3.42ns)   --->   "%call_ln636 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:636->src/mobilenet_block_accel.cpp:634]   --->   Operation 23 'call' 'call_ln636' <Predicate = (p_read_4 & !p_read_3)> <Delay = 3.42> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 24 [2/2] (3.42ns)   --->   "%call_ln644 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:644->src/mobilenet_block_accel.cpp:634]   --->   Operation 24 'call' 'call_ln644' <Predicate = (p_read_4 & p_read_3)> <Delay = 3.42> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln636 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:636->src/mobilenet_block_accel.cpp:634]   --->   Operation 25 'call' 'call_ln636' <Predicate = (p_read_4 & !p_read_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln643 = br void %if.end11.i.i" [src/mobilenet_block_accel.cpp:643->src/mobilenet_block_accel.cpp:634]   --->   Operation 26 'br' 'br_ln643' <Predicate = (p_read_4 & !p_read_3)> <Delay = 0.00>
+ST_2 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln644 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read" [src/mobilenet_block_accel.cpp:644->src/mobilenet_block_accel.cpp:634]   --->   Operation 27 'call' 'call_ln644' <Predicate = (p_read_4 & p_read_3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end11.i.i"   --->   Operation 28 'br' 'br_ln0' <Predicate = (p_read_4 & p_read_3)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln652 = br void %dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc.exit" [src/mobilenet_block_accel.cpp:652->src/mobilenet_block_accel.cpp:634]   --->   Operation 29 'br' 'br_ln652' <Predicate = (p_read_4)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln634 = ret" [src/mobilenet_block_accel.cpp:634]   --->   Operation 30 'ret' 'ret_ln634' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ gmem_pw_w]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
+Port [ pw_weights]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ pw_bias]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ gmem_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
+Port [ output_r]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ height]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ width]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ c_in]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ c_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ pw_act_zp]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ pw_wgt_zp]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ pw_out_zp]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ pw_M_mantissa]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ pw_M_shift]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ pw_use_bias]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0  (specinterface) [ 000]
+specinterface_ln0  (specinterface) [ 000]
+pw_use_bias_read   (read         ) [ 001]
+pw_M_shift_read    (read         ) [ 001]
+pw_M_mantissa_read (read         ) [ 001]
+pw_out_zp_read     (read         ) [ 001]
+pw_wgt_zp_read     (read         ) [ 001]
+pw_act_zp_read     (read         ) [ 001]
+c_out_read         (read         ) [ 001]
+c_in_read          (read         ) [ 001]
+width_read         (read         ) [ 001]
+height_read        (read         ) [ 001]
+p_read_2           (read         ) [ 001]
+output_read        (read         ) [ 001]
+pw_bias_read       (read         ) [ 001]
+pw_weights_read    (read         ) [ 001]
+p_read_3           (read         ) [ 011]
+p_read_4           (read         ) [ 011]
+br_ln634           (br           ) [ 000]
+br_ln635           (br           ) [ 000]
+call_ln636         (call         ) [ 000]
+br_ln643           (br           ) [ 000]
+call_ln644         (call         ) [ 000]
+br_ln0             (br           ) [ 000]
+br_ln652           (br           ) [ 000]
+ret_ln634          (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="p_read">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="p_read1">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="gmem_pw_w">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gmem_pw_w"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="pw_weights">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_weights"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="pw_bias">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_bias"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="gmem_out">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gmem_out"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="output_r">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="output_r"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="p_read2">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="height">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="height"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="width">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="width"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="c_in">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="c_in"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="c_out">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="c_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="pw_act_zp">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_act_zp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="pw_wgt_zp">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_wgt_zp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="pw_out_zp">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_out_zp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="pw_M_mantissa">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_M_mantissa"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="pw_M_shift">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_M_shift"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="pw_use_bias">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_use_bias"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1000" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1000" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1001" name="const_100">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1001" name="const_102">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1001" name="const_104">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1001" name="const_106">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_42"/></StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1001" name="const_108">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1001" name="const_110">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1001" name="const_112">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_44"/></StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1001" name="const_118">
+<pin_list>
+<pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="120" class="1001" name="const_120">
+<pin_list>
+<pin id="121" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="122" class="1001" name="const_122">
+<pin_list>
+<pin id="123" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="124" class="1001" name="const_124">
+<pin_list>
+<pin id="125" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="126" class="1001" name="const_126">
+<pin_list>
+<pin id="127" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="128" class="1001" name="const_128">
+<pin_list>
+<pin id="129" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="130" class="1001" name="const_130">
+<pin_list>
+<pin id="131" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pw_row_stage"/></StgValue>
+</bind>
+</comp>
+
+<comp id="132" class="1004" name="pw_use_bias_read_read_fu_132">
+<pin_list>
+<pin id="133" dir="0" index="0" bw="32" slack="0"/>
+<pin id="134" dir="0" index="1" bw="32" slack="0"/>
+<pin id="135" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_use_bias_read/1 "/>
+</bind>
+</comp>
+
+<comp id="138" class="1004" name="pw_M_shift_read_read_fu_138">
+<pin_list>
+<pin id="139" dir="0" index="0" bw="32" slack="0"/>
+<pin id="140" dir="0" index="1" bw="32" slack="0"/>
+<pin id="141" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_M_shift_read/1 "/>
+</bind>
+</comp>
+
+<comp id="144" class="1004" name="pw_M_mantissa_read_read_fu_144">
+<pin_list>
+<pin id="145" dir="0" index="0" bw="32" slack="0"/>
+<pin id="146" dir="0" index="1" bw="32" slack="0"/>
+<pin id="147" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_M_mantissa_read/1 "/>
+</bind>
+</comp>
+
+<comp id="150" class="1004" name="pw_out_zp_read_read_fu_150">
+<pin_list>
+<pin id="151" dir="0" index="0" bw="32" slack="0"/>
+<pin id="152" dir="0" index="1" bw="32" slack="0"/>
+<pin id="153" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_out_zp_read/1 "/>
+</bind>
+</comp>
+
+<comp id="156" class="1004" name="pw_wgt_zp_read_read_fu_156">
+<pin_list>
+<pin id="157" dir="0" index="0" bw="16" slack="0"/>
+<pin id="158" dir="0" index="1" bw="16" slack="0"/>
+<pin id="159" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_wgt_zp_read/1 "/>
+</bind>
+</comp>
+
+<comp id="162" class="1004" name="pw_act_zp_read_read_fu_162">
+<pin_list>
+<pin id="163" dir="0" index="0" bw="16" slack="0"/>
+<pin id="164" dir="0" index="1" bw="16" slack="0"/>
+<pin id="165" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_act_zp_read/1 "/>
+</bind>
+</comp>
+
+<comp id="168" class="1004" name="c_out_read_read_fu_168">
+<pin_list>
+<pin id="169" dir="0" index="0" bw="32" slack="0"/>
+<pin id="170" dir="0" index="1" bw="32" slack="0"/>
+<pin id="171" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="c_out_read/1 "/>
+</bind>
+</comp>
+
+<comp id="174" class="1004" name="c_in_read_read_fu_174">
+<pin_list>
+<pin id="175" dir="0" index="0" bw="32" slack="0"/>
+<pin id="176" dir="0" index="1" bw="32" slack="0"/>
+<pin id="177" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="c_in_read/1 "/>
+</bind>
+</comp>
+
+<comp id="180" class="1004" name="width_read_read_fu_180">
+<pin_list>
+<pin id="181" dir="0" index="0" bw="32" slack="0"/>
+<pin id="182" dir="0" index="1" bw="32" slack="0"/>
+<pin id="183" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="width_read/1 "/>
+</bind>
+</comp>
+
+<comp id="186" class="1004" name="height_read_read_fu_186">
+<pin_list>
+<pin id="187" dir="0" index="0" bw="32" slack="0"/>
+<pin id="188" dir="0" index="1" bw="32" slack="0"/>
+<pin id="189" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="height_read/1 "/>
+</bind>
+</comp>
+
+<comp id="192" class="1004" name="p_read_2_read_fu_192">
+<pin_list>
+<pin id="193" dir="0" index="0" bw="32" slack="0"/>
+<pin id="194" dir="0" index="1" bw="32" slack="0"/>
+<pin id="195" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_2/1 "/>
+</bind>
+</comp>
+
+<comp id="198" class="1004" name="output_read_read_fu_198">
+<pin_list>
+<pin id="199" dir="0" index="0" bw="64" slack="0"/>
+<pin id="200" dir="0" index="1" bw="64" slack="0"/>
+<pin id="201" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="output_read/1 "/>
+</bind>
+</comp>
+
+<comp id="204" class="1004" name="pw_bias_read_read_fu_204">
+<pin_list>
+<pin id="205" dir="0" index="0" bw="64" slack="0"/>
+<pin id="206" dir="0" index="1" bw="64" slack="0"/>
+<pin id="207" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_bias_read/1 "/>
+</bind>
+</comp>
+
+<comp id="210" class="1004" name="pw_weights_read_read_fu_210">
+<pin_list>
+<pin id="211" dir="0" index="0" bw="64" slack="0"/>
+<pin id="212" dir="0" index="1" bw="64" slack="0"/>
+<pin id="213" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="pw_weights_read/1 "/>
+</bind>
+</comp>
+
+<comp id="216" class="1004" name="p_read_3_read_fu_216">
+<pin_list>
+<pin id="217" dir="0" index="0" bw="1" slack="0"/>
+<pin id="218" dir="0" index="1" bw="1" slack="0"/>
+<pin id="219" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_3/1 "/>
+</bind>
+</comp>
+
+<comp id="222" class="1004" name="p_read_4_read_fu_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="1" slack="0"/>
+<pin id="224" dir="0" index="1" bw="1" slack="0"/>
+<pin id="225" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_4/1 "/>
+</bind>
+</comp>
+
+<comp id="228" class="1004" name="grp_pw_row_stage_fu_228">
+<pin_list>
+<pin id="229" dir="0" index="0" bw="0" slack="0"/>
+<pin id="230" dir="0" index="1" bw="8" slack="0"/>
+<pin id="231" dir="0" index="2" bw="8" slack="0"/>
+<pin id="232" dir="0" index="3" bw="8" slack="0"/>
+<pin id="233" dir="0" index="4" bw="8" slack="0"/>
+<pin id="234" dir="0" index="5" bw="8" slack="0"/>
+<pin id="235" dir="0" index="6" bw="8" slack="0"/>
+<pin id="236" dir="0" index="7" bw="8" slack="0"/>
+<pin id="237" dir="0" index="8" bw="8" slack="0"/>
+<pin id="238" dir="0" index="9" bw="8" slack="0"/>
+<pin id="239" dir="0" index="10" bw="8" slack="0"/>
+<pin id="240" dir="0" index="11" bw="8" slack="0"/>
+<pin id="241" dir="0" index="12" bw="8" slack="0"/>
+<pin id="242" dir="0" index="13" bw="8" slack="0"/>
+<pin id="243" dir="0" index="14" bw="8" slack="0"/>
+<pin id="244" dir="0" index="15" bw="8" slack="0"/>
+<pin id="245" dir="0" index="16" bw="8" slack="0"/>
+<pin id="246" dir="0" index="17" bw="32" slack="0"/>
+<pin id="247" dir="0" index="18" bw="64" slack="0"/>
+<pin id="248" dir="0" index="19" bw="64" slack="0"/>
+<pin id="249" dir="0" index="20" bw="8" slack="0"/>
+<pin id="250" dir="0" index="21" bw="64" slack="0"/>
+<pin id="251" dir="0" index="22" bw="32" slack="0"/>
+<pin id="252" dir="0" index="23" bw="32" slack="0"/>
+<pin id="253" dir="0" index="24" bw="32" slack="0"/>
+<pin id="254" dir="0" index="25" bw="32" slack="0"/>
+<pin id="255" dir="0" index="26" bw="32" slack="0"/>
+<pin id="256" dir="0" index="27" bw="16" slack="0"/>
+<pin id="257" dir="0" index="28" bw="16" slack="0"/>
+<pin id="258" dir="0" index="29" bw="32" slack="0"/>
+<pin id="259" dir="0" index="30" bw="32" slack="0"/>
+<pin id="260" dir="0" index="31" bw="32" slack="0"/>
+<pin id="261" dir="0" index="32" bw="32" slack="0"/>
+<pin id="262" dir="1" index="33" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln636/1 call_ln644/1 "/>
+</bind>
+</comp>
+
+<comp id="312" class="1005" name="pw_use_bias_read_reg_312">
+<pin_list>
+<pin id="313" dir="0" index="0" bw="32" slack="1"/>
+<pin id="314" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_use_bias_read "/>
+</bind>
+</comp>
+
+<comp id="317" class="1005" name="pw_M_shift_read_reg_317">
+<pin_list>
+<pin id="318" dir="0" index="0" bw="32" slack="1"/>
+<pin id="319" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_M_shift_read "/>
+</bind>
+</comp>
+
+<comp id="322" class="1005" name="pw_M_mantissa_read_reg_322">
+<pin_list>
+<pin id="323" dir="0" index="0" bw="32" slack="1"/>
+<pin id="324" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_M_mantissa_read "/>
+</bind>
+</comp>
+
+<comp id="327" class="1005" name="pw_out_zp_read_reg_327">
+<pin_list>
+<pin id="328" dir="0" index="0" bw="32" slack="1"/>
+<pin id="329" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_out_zp_read "/>
+</bind>
+</comp>
+
+<comp id="332" class="1005" name="pw_wgt_zp_read_reg_332">
+<pin_list>
+<pin id="333" dir="0" index="0" bw="16" slack="1"/>
+<pin id="334" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_wgt_zp_read "/>
+</bind>
+</comp>
+
+<comp id="337" class="1005" name="pw_act_zp_read_reg_337">
+<pin_list>
+<pin id="338" dir="0" index="0" bw="16" slack="1"/>
+<pin id="339" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_act_zp_read "/>
+</bind>
+</comp>
+
+<comp id="342" class="1005" name="c_out_read_reg_342">
+<pin_list>
+<pin id="343" dir="0" index="0" bw="32" slack="1"/>
+<pin id="344" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="c_out_read "/>
+</bind>
+</comp>
+
+<comp id="347" class="1005" name="c_in_read_reg_347">
+<pin_list>
+<pin id="348" dir="0" index="0" bw="32" slack="1"/>
+<pin id="349" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="c_in_read "/>
+</bind>
+</comp>
+
+<comp id="352" class="1005" name="width_read_reg_352">
+<pin_list>
+<pin id="353" dir="0" index="0" bw="32" slack="1"/>
+<pin id="354" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="width_read "/>
+</bind>
+</comp>
+
+<comp id="357" class="1005" name="height_read_reg_357">
+<pin_list>
+<pin id="358" dir="0" index="0" bw="32" slack="1"/>
+<pin id="359" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="height_read "/>
+</bind>
+</comp>
+
+<comp id="362" class="1005" name="p_read_2_reg_362">
+<pin_list>
+<pin id="363" dir="0" index="0" bw="32" slack="1"/>
+<pin id="364" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_2 "/>
+</bind>
+</comp>
+
+<comp id="367" class="1005" name="output_read_reg_367">
+<pin_list>
+<pin id="368" dir="0" index="0" bw="64" slack="1"/>
+<pin id="369" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="output_read "/>
+</bind>
+</comp>
+
+<comp id="372" class="1005" name="pw_bias_read_reg_372">
+<pin_list>
+<pin id="373" dir="0" index="0" bw="64" slack="1"/>
+<pin id="374" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_bias_read "/>
+</bind>
+</comp>
+
+<comp id="377" class="1005" name="pw_weights_read_reg_377">
+<pin_list>
+<pin id="378" dir="0" index="0" bw="64" slack="1"/>
+<pin id="379" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="pw_weights_read "/>
+</bind>
+</comp>
+
+<comp id="382" class="1005" name="p_read_3_reg_382">
+<pin_list>
+<pin id="383" dir="0" index="0" bw="1" slack="1"/>
+<pin id="384" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="p_read_3 "/>
+</bind>
+</comp>
+
+<comp id="386" class="1005" name="p_read_4_reg_386">
+<pin_list>
+<pin id="387" dir="0" index="0" bw="1" slack="1"/>
+<pin id="388" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="p_read_4 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="136"><net_src comp="122" pin="0"/><net_sink comp="132" pin=0"/></net>
+
+<net id="137"><net_src comp="34" pin="0"/><net_sink comp="132" pin=1"/></net>
+
+<net id="142"><net_src comp="122" pin="0"/><net_sink comp="138" pin=0"/></net>
+
+<net id="143"><net_src comp="32" pin="0"/><net_sink comp="138" pin=1"/></net>
+
+<net id="148"><net_src comp="122" pin="0"/><net_sink comp="144" pin=0"/></net>
+
+<net id="149"><net_src comp="30" pin="0"/><net_sink comp="144" pin=1"/></net>
+
+<net id="154"><net_src comp="122" pin="0"/><net_sink comp="150" pin=0"/></net>
+
+<net id="155"><net_src comp="28" pin="0"/><net_sink comp="150" pin=1"/></net>
+
+<net id="160"><net_src comp="124" pin="0"/><net_sink comp="156" pin=0"/></net>
+
+<net id="161"><net_src comp="26" pin="0"/><net_sink comp="156" pin=1"/></net>
+
+<net id="166"><net_src comp="124" pin="0"/><net_sink comp="162" pin=0"/></net>
+
+<net id="167"><net_src comp="24" pin="0"/><net_sink comp="162" pin=1"/></net>
+
+<net id="172"><net_src comp="122" pin="0"/><net_sink comp="168" pin=0"/></net>
+
+<net id="173"><net_src comp="22" pin="0"/><net_sink comp="168" pin=1"/></net>
+
+<net id="178"><net_src comp="122" pin="0"/><net_sink comp="174" pin=0"/></net>
+
+<net id="179"><net_src comp="20" pin="0"/><net_sink comp="174" pin=1"/></net>
+
+<net id="184"><net_src comp="122" pin="0"/><net_sink comp="180" pin=0"/></net>
+
+<net id="185"><net_src comp="18" pin="0"/><net_sink comp="180" pin=1"/></net>
+
+<net id="190"><net_src comp="122" pin="0"/><net_sink comp="186" pin=0"/></net>
+
+<net id="191"><net_src comp="16" pin="0"/><net_sink comp="186" pin=1"/></net>
+
+<net id="196"><net_src comp="122" pin="0"/><net_sink comp="192" pin=0"/></net>
+
+<net id="197"><net_src comp="14" pin="0"/><net_sink comp="192" pin=1"/></net>
+
+<net id="202"><net_src comp="126" pin="0"/><net_sink comp="198" pin=0"/></net>
+
+<net id="203"><net_src comp="12" pin="0"/><net_sink comp="198" pin=1"/></net>
+
+<net id="208"><net_src comp="126" pin="0"/><net_sink comp="204" pin=0"/></net>
+
+<net id="209"><net_src comp="8" pin="0"/><net_sink comp="204" pin=1"/></net>
+
+<net id="214"><net_src comp="126" pin="0"/><net_sink comp="210" pin=0"/></net>
+
+<net id="215"><net_src comp="6" pin="0"/><net_sink comp="210" pin=1"/></net>
+
+<net id="220"><net_src comp="128" pin="0"/><net_sink comp="216" pin=0"/></net>
+
+<net id="221"><net_src comp="2" pin="0"/><net_sink comp="216" pin=1"/></net>
+
+<net id="226"><net_src comp="128" pin="0"/><net_sink comp="222" pin=0"/></net>
+
+<net id="227"><net_src comp="0" pin="0"/><net_sink comp="222" pin=1"/></net>
+
+<net id="263"><net_src comp="130" pin="0"/><net_sink comp="228" pin=0"/></net>
+
+<net id="264"><net_src comp="68" pin="0"/><net_sink comp="228" pin=1"/></net>
+
+<net id="265"><net_src comp="70" pin="0"/><net_sink comp="228" pin=2"/></net>
+
+<net id="266"><net_src comp="72" pin="0"/><net_sink comp="228" pin=3"/></net>
+
+<net id="267"><net_src comp="74" pin="0"/><net_sink comp="228" pin=4"/></net>
+
+<net id="268"><net_src comp="76" pin="0"/><net_sink comp="228" pin=5"/></net>
+
+<net id="269"><net_src comp="78" pin="0"/><net_sink comp="228" pin=6"/></net>
+
+<net id="270"><net_src comp="80" pin="0"/><net_sink comp="228" pin=7"/></net>
+
+<net id="271"><net_src comp="82" pin="0"/><net_sink comp="228" pin=8"/></net>
+
+<net id="272"><net_src comp="84" pin="0"/><net_sink comp="228" pin=9"/></net>
+
+<net id="273"><net_src comp="86" pin="0"/><net_sink comp="228" pin=10"/></net>
+
+<net id="274"><net_src comp="88" pin="0"/><net_sink comp="228" pin=11"/></net>
+
+<net id="275"><net_src comp="90" pin="0"/><net_sink comp="228" pin=12"/></net>
+
+<net id="276"><net_src comp="92" pin="0"/><net_sink comp="228" pin=13"/></net>
+
+<net id="277"><net_src comp="94" pin="0"/><net_sink comp="228" pin=14"/></net>
+
+<net id="278"><net_src comp="96" pin="0"/><net_sink comp="228" pin=15"/></net>
+
+<net id="279"><net_src comp="98" pin="0"/><net_sink comp="228" pin=16"/></net>
+
+<net id="280"><net_src comp="4" pin="0"/><net_sink comp="228" pin=17"/></net>
+
+<net id="281"><net_src comp="210" pin="2"/><net_sink comp="228" pin=18"/></net>
+
+<net id="282"><net_src comp="204" pin="2"/><net_sink comp="228" pin=19"/></net>
+
+<net id="283"><net_src comp="10" pin="0"/><net_sink comp="228" pin=20"/></net>
+
+<net id="284"><net_src comp="198" pin="2"/><net_sink comp="228" pin=21"/></net>
+
+<net id="285"><net_src comp="192" pin="2"/><net_sink comp="228" pin=22"/></net>
+
+<net id="286"><net_src comp="186" pin="2"/><net_sink comp="228" pin=23"/></net>
+
+<net id="287"><net_src comp="180" pin="2"/><net_sink comp="228" pin=24"/></net>
+
+<net id="288"><net_src comp="174" pin="2"/><net_sink comp="228" pin=25"/></net>
+
+<net id="289"><net_src comp="168" pin="2"/><net_sink comp="228" pin=26"/></net>
+
+<net id="290"><net_src comp="162" pin="2"/><net_sink comp="228" pin=27"/></net>
+
+<net id="291"><net_src comp="156" pin="2"/><net_sink comp="228" pin=28"/></net>
+
+<net id="292"><net_src comp="150" pin="2"/><net_sink comp="228" pin=29"/></net>
+
+<net id="293"><net_src comp="144" pin="2"/><net_sink comp="228" pin=30"/></net>
+
+<net id="294"><net_src comp="138" pin="2"/><net_sink comp="228" pin=31"/></net>
+
+<net id="295"><net_src comp="132" pin="2"/><net_sink comp="228" pin=32"/></net>
+
+<net id="296"><net_src comp="36" pin="0"/><net_sink comp="228" pin=1"/></net>
+
+<net id="297"><net_src comp="38" pin="0"/><net_sink comp="228" pin=2"/></net>
+
+<net id="298"><net_src comp="40" pin="0"/><net_sink comp="228" pin=3"/></net>
+
+<net id="299"><net_src comp="42" pin="0"/><net_sink comp="228" pin=4"/></net>
+
+<net id="300"><net_src comp="44" pin="0"/><net_sink comp="228" pin=5"/></net>
+
+<net id="301"><net_src comp="46" pin="0"/><net_sink comp="228" pin=6"/></net>
+
+<net id="302"><net_src comp="48" pin="0"/><net_sink comp="228" pin=7"/></net>
+
+<net id="303"><net_src comp="50" pin="0"/><net_sink comp="228" pin=8"/></net>
+
+<net id="304"><net_src comp="52" pin="0"/><net_sink comp="228" pin=9"/></net>
+
+<net id="305"><net_src comp="54" pin="0"/><net_sink comp="228" pin=10"/></net>
+
+<net id="306"><net_src comp="56" pin="0"/><net_sink comp="228" pin=11"/></net>
+
+<net id="307"><net_src comp="58" pin="0"/><net_sink comp="228" pin=12"/></net>
+
+<net id="308"><net_src comp="60" pin="0"/><net_sink comp="228" pin=13"/></net>
+
+<net id="309"><net_src comp="62" pin="0"/><net_sink comp="228" pin=14"/></net>
+
+<net id="310"><net_src comp="64" pin="0"/><net_sink comp="228" pin=15"/></net>
+
+<net id="311"><net_src comp="66" pin="0"/><net_sink comp="228" pin=16"/></net>
+
+<net id="315"><net_src comp="132" pin="2"/><net_sink comp="312" pin=0"/></net>
+
+<net id="316"><net_src comp="312" pin="1"/><net_sink comp="228" pin=32"/></net>
+
+<net id="320"><net_src comp="138" pin="2"/><net_sink comp="317" pin=0"/></net>
+
+<net id="321"><net_src comp="317" pin="1"/><net_sink comp="228" pin=31"/></net>
+
+<net id="325"><net_src comp="144" pin="2"/><net_sink comp="322" pin=0"/></net>
+
+<net id="326"><net_src comp="322" pin="1"/><net_sink comp="228" pin=30"/></net>
+
+<net id="330"><net_src comp="150" pin="2"/><net_sink comp="327" pin=0"/></net>
+
+<net id="331"><net_src comp="327" pin="1"/><net_sink comp="228" pin=29"/></net>
+
+<net id="335"><net_src comp="156" pin="2"/><net_sink comp="332" pin=0"/></net>
+
+<net id="336"><net_src comp="332" pin="1"/><net_sink comp="228" pin=28"/></net>
+
+<net id="340"><net_src comp="162" pin="2"/><net_sink comp="337" pin=0"/></net>
+
+<net id="341"><net_src comp="337" pin="1"/><net_sink comp="228" pin=27"/></net>
+
+<net id="345"><net_src comp="168" pin="2"/><net_sink comp="342" pin=0"/></net>
+
+<net id="346"><net_src comp="342" pin="1"/><net_sink comp="228" pin=26"/></net>
+
+<net id="350"><net_src comp="174" pin="2"/><net_sink comp="347" pin=0"/></net>
+
+<net id="351"><net_src comp="347" pin="1"/><net_sink comp="228" pin=25"/></net>
+
+<net id="355"><net_src comp="180" pin="2"/><net_sink comp="352" pin=0"/></net>
+
+<net id="356"><net_src comp="352" pin="1"/><net_sink comp="228" pin=24"/></net>
+
+<net id="360"><net_src comp="186" pin="2"/><net_sink comp="357" pin=0"/></net>
+
+<net id="361"><net_src comp="357" pin="1"/><net_sink comp="228" pin=23"/></net>
+
+<net id="365"><net_src comp="192" pin="2"/><net_sink comp="362" pin=0"/></net>
+
+<net id="366"><net_src comp="362" pin="1"/><net_sink comp="228" pin=22"/></net>
+
+<net id="370"><net_src comp="198" pin="2"/><net_sink comp="367" pin=0"/></net>
+
+<net id="371"><net_src comp="367" pin="1"/><net_sink comp="228" pin=21"/></net>
+
+<net id="375"><net_src comp="204" pin="2"/><net_sink comp="372" pin=0"/></net>
+
+<net id="376"><net_src comp="372" pin="1"/><net_sink comp="228" pin=19"/></net>
+
+<net id="380"><net_src comp="210" pin="2"/><net_sink comp="377" pin=0"/></net>
+
+<net id="381"><net_src comp="377" pin="1"/><net_sink comp="228" pin=18"/></net>
+
+<net id="385"><net_src comp="216" pin="2"/><net_sink comp="382" pin=0"/></net>
+
+<net id="389"><net_src comp="222" pin="2"/><net_sink comp="386" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: gmem_pw_w | {}
+	Port: gmem_out | {1 2 }
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11 | {}
+	Port: mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14 | {}
+	Port: p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15 | {}
+ - Input state : 
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_read | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_read1 | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : gmem_pw_w | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_weights | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_bias | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : gmem_out | {}
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : output_r | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_read2 | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : height | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : width | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : c_in | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : c_out | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_act_zp | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_wgt_zp | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_out_zp | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_M_mantissa | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_M_shift | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : pw_use_bias | {1 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14 | {1 2 }
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc : p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15 | {1 2 }
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|         Functional Unit        |   BRAM  |   DSP   |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|--------------------------------|---------|---------|---------|---------|---------|---------|
+|   call   |     grp_pw_row_stage_fu_228    |    0    |    32   | 153.285 |  10906  |  13045  |    0    |
+|----------|--------------------------------|---------|---------|---------|---------|---------|---------|
+|          |  pw_use_bias_read_read_fu_132  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   pw_M_shift_read_read_fu_138  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          | pw_M_mantissa_read_read_fu_144 |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   pw_out_zp_read_read_fu_150   |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   pw_wgt_zp_read_read_fu_156   |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   pw_act_zp_read_read_fu_162   |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |     c_out_read_read_fu_168     |    0    |    0    |    0    |    0    |    0    |    0    |
+|   read   |      c_in_read_read_fu_174     |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |     width_read_read_fu_180     |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |     height_read_read_fu_186    |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |      p_read_2_read_fu_192      |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |     output_read_read_fu_198    |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |    pw_bias_read_read_fu_204    |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   pw_weights_read_read_fu_210  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |      p_read_3_read_fu_216      |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |      p_read_4_read_fu_222      |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|--------------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                                |    0    |    32   | 153.285 |  10906  |  13045  |    0    |
+|----------|--------------------------------|---------|---------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------------------+--------+
+|                          |   FF   |
++--------------------------+--------+
+|     c_in_read_reg_347    |   32   |
+|    c_out_read_reg_342    |   32   |
+|    height_read_reg_357   |   32   |
+|    output_read_reg_367   |   64   |
+|     p_read_2_reg_362     |   32   |
+|     p_read_3_reg_382     |    1   |
+|     p_read_4_reg_386     |    1   |
+|pw_M_mantissa_read_reg_322|   32   |
+|  pw_M_shift_read_reg_317 |   32   |
+|  pw_act_zp_read_reg_337  |   16   |
+|   pw_bias_read_reg_372   |   64   |
+|  pw_out_zp_read_reg_327  |   32   |
+| pw_use_bias_read_reg_312 |   32   |
+|  pw_weights_read_reg_377 |   64   |
+|  pw_wgt_zp_read_reg_332  |   16   |
+|    width_read_reg_352    |   32   |
++--------------------------+--------+
+|           Total          |   514  |
++--------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-------------------------|------|------|------|--------||---------||---------||---------|
+|           Comp          |  Pin | Size |  BW  | S x BW ||  Delay  ||    FF   ||   LUT   |
+|-------------------------|------|------|------|--------||---------||---------||---------|
+| grp_pw_row_stage_fu_228 |  p1  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p2  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p3  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p4  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p5  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p6  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p7  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p8  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p9  |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p10 |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p11 |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p12 |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p13 |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p14 |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p15 |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p16 |   2  |   8  |   16   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p18 |   2  |  64  |   128  ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p19 |   2  |  64  |   128  ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p21 |   2  |  64  |   128  ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p22 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p23 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p24 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p25 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p26 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p27 |   2  |  16  |   32   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p28 |   2  |  16  |   32   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p29 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p30 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p31 |   2  |  32  |   64   ||    0    ||    9    |
+| grp_pw_row_stage_fu_228 |  p32 |   2  |  32  |   64   ||    0    ||    9    |
+|-------------------------|------|------|------|--------||---------||---------||---------|
+|          Total          |      |      |      |  1280  ||  12.81  ||    0    ||   270   |
+|-------------------------|------|------|------|--------||---------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    0   |   32   |   153  |  10906 |  13045 |    0   |
+|   Memory  |    -   |    -   |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |   12   |    0   |   270  |    -   |
+|  Register |    -   |    -   |    -   |   514  |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |    0   |   32   |   166  |  11420 |  13315 |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

@@ -1,0 +1,82 @@
+<ENTRY>
+{
+ "thisFile": "d:/Lab\\scratchpad\\hls_test\\mobilenet_ultra_accel\\hls_work\\hls_work.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/23/26 14:38:37",
+ "timestampMillis": "1771825117722",
+ "buildStep": {
+  "cmdId": "c2ad20a6-9d1d-47d4-8f99-78435c15b66d",
+  "name": "vitis-run",
+  "logFile": "d:/Lab\\scratchpad\\hls_test\\mobilenet_ultra_accel\\hls_work\\logs\\hls_work.steps.log",
+  "commandLine": "D:/Programs/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config hls_config.cfg --work_dir hls_work ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "hls_config.cfg",
+   "--work_dir",
+   "hls_work"
+  ],
+  "iniFiles": [],
+  "cwd": "d:\\Lab\\scratchpad\\hls_test\\mobilenet_ultra_accel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/23/26 14:38:37",
+ "timestampMillis": "1771825117722",
+ "status": {
+  "cmdId": "c2ad20a6-9d1d-47d4-8f99-78435c15b66d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/23/26 14:38:44",
+ "timestampMillis": "1771825124044",
+ "status": {
+  "cmdId": "c2ad20a6-9d1d-47d4-8f99-78435c15b66d",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/23/26 14:38:44",
+ "timestampMillis": "1771825124045",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/23/26 14:38:44",
+ "timestampMillis": "1771825124046",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,41 @@
+{
+  "0": {
+    "basicblocks": 12,
+    "calls": "1 1 2 2",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 473,
+    "instructions": 125,
+    "name": "mobilenet_block_accel",
+    "total_instructions": 7755
+  },
+  "1": {
+    "basicblocks": 55,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 143,
+    "instructions": 412,
+    "loads": {
+      "L": 7
+    },
+    "name": "dw_row_stage",
+    "stores": {
+      "L": 25
+    },
+    "total_instructions": 412
+  },
+  "2": {
+    "basicblocks": 395,
+    "calls": "",
+    "file": "mobilenet_block_accel.cpp",
+    "fileloc": 319,
+    "instructions": 3403,
+    "loads": {
+      "L": 304
+    },
+    "name": "pw_row_stage",
+    "stores": {
+      "L": 288
+    },
+    "total_instructions": 3403
+  }
+}

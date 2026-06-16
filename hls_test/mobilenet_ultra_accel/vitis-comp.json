@@ -1,0 +1,10 @@
+{
+  "specification": "1.0",
+  "type": "HLS",
+  "name": "mobilenet_ultra_accel",
+  "part": "xczu7ev-ffvc1156-2-e",
+  "configuration": {
+    "componentType": "HLS",
+    "hlsConfiguration": "hls_config.cfg"
+  }
+}

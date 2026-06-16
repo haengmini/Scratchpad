@@ -1,0 +1,1878 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 282, Column: 36 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dw_round_shift(int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 77, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 292, Column: 63 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clamp_u8(int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 88, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 435, Column: 44 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pw_requantize(int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 104, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 616, Column: 13 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - Callee:          'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_block_accel(unsigned char const*, unsigned char const*, int const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 497, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 636, Column: 17 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - Callee:          'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_block_accel(unsigned char const*, unsigned char const*, int const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 497, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 418, Column: 34 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        PW_TILE_MAC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 260, Column: 31 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW_WIN_SHIFT
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 271, Column: 28 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW_MAC_KH
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 273, Column: 13 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW_MAC_KW
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, Column: 0 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        PW_INIT_ACC
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:397:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, Column: 0 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        PW_TILE_MAC
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:418:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, Column: 0 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        PW_STORE_OUT
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:430:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, Column: 0 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_230_2
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:230:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, Column: 0 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW_WIN_SHIFT
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:260:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, Column: 0 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW_MAC_KH
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:271:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, Column: 0 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW_MAC_KW
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:273:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, Column: 0 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW_MAC_KW
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:273:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, Column: 0 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW_MAC_KW
+  - String:          ''' ('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:273:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw_row_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 616, Column: 13 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - Callee:          'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_block_accel(unsigned char const*, unsigned char const*, int const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 497, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 636, Column: 17 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - Callee:          'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_block_accel(unsigned char const*, unsigned char const*, int const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 497, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_mobilenet_block_accel_ir
+Args:            
+  - Callee:          'mobilenet_block_accel(unsigned char const*, unsigned char const*, int const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 497, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_mobilenet_block_accel_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 564, Column: 0 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 561, Column: 0 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 167, Column: 13 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          line_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 171, Column: 13 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          window
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 175, Column: 13 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          w_cache
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 343, Column: 13 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 347, Column: 13 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          wgt_tile
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, Column: 41 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       pw_weights
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOAD_WGT_CI
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:387:41'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 389, 
+                       Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc40.load.263
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, Column: 41 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, 
+                       Column: 41 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, 
+                       Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       pw_weights
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOAD_WGT
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:383:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.1.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.2.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.3.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.4.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.5.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.6.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.7.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.8.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.9.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.10.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.11.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.12.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.13.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.14.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, Column: 38 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 400, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          if.then54.15.load.1
+  - ArrayName:       pw_bias
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.store.43
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.1.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.2.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.3.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.4.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.5.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.6.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.7.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.8.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.9.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.10.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.11.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.12.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.13.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.14.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, Column: 57 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 442, 
+                       Column: 57 }
+  - OrigDirection:   write
+  - OrigID:          if.then115.15.store.26
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem_out
+  - String:          ' '
+  - LoopName:        PW_LOOP_CO_TILE
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:378:30'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 186, Column: 20 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '9'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       dw_weights
+  - String:          ' '
+  - BundleName:      gmem_dw_w
+  - String:          ' '
+  - LoopName:        DW_LOAD_W
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:186:20'
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 189, 
+                       Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.24
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 219, Column: 23 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 219, 
+                       Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          cond.true39.load.4
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem_in
+  - String:          ' '
+  - LoopName:        DW_INIT_LB
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:204:21'
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 221, Column: 36 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 221, 
+                       Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          cond.end48.load.6
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem_in
+  - String:          ' '
+  - LoopName:        DW_INIT_LB
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:204:21'
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 248, Column: 22 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      in_val
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 248, 
+                       Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          DW_WIN_SHIFT.load.31
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem_in
+  - String:          ' '
+  - LoopName:        DW_LOOP_W
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:244:24'
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 196, Column: 47 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 189, 
+                       Column: 20 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      acc
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 196, 
+                       Column: 47 }
+  - OrigDirection:   read
+  - OrigID:          cond.true.load.11
+  - ArrayName:       dw_bias
+  - String:          ' '
+  - BundleName:      gmem_dw_w
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 186, Column: 20 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     acc
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 196, 
+                       Column: 47 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 186, 
+                       Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       dw_weights
+  - String:          ' '
+  - BundleName:      gmem_dw_w
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, Column: 41 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, 
+                       Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       pw_weights
+  - String:          ' '
+  - BundleName:      gmem_pw_w
+  - String:          ' '
+  - LoopName:        PW_LOAD_WGT_CI
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:387:41'
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 186, Column: 20 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 186, 
+                       Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       dw_weights
+  - String:          ' '
+  - BundleName:      gmem_dw_w
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_187_1
+  - String:          ' '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:187:31'
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            IndivisibleLoopTripCountByRate
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 624, Column: 13 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - String:          'Conservative occurrence information for '''
+  - BBName:          if.else
+  - String:          ''' living in '''
+  - LoopName:        TILE_LOOP
+  - String:          '''('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:586:16'
+  - String:          ') due to indivisible loop trip count by rate.'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            IndivisibleLoopTripCountByRate
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 616, Column: 13 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - String:          'Conservative occurrence information for '''
+  - BBName:          if.then
+  - String:          ''' living in '''
+  - LoopName:        TILE_LOOP
+  - String:          '''('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:586:16'
+  - String:          ') due to indivisible loop trip count by rate.'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 644, Column: 17 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.else10
+  - String:          ''' living in '''
+  - LoopName:        TILE_LOOP
+  - String:          '''('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:586:16'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 636, Column: 17 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then9
+  - String:          ''' living in '''
+  - LoopName:        TILE_LOOP
+  - String:          '''('
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:586:16'
+  - String:          ') .'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        DW_INIT_WIN
+  - String:          '> at '
+  - LoopLoc:         'src/mobilenet_block_accel.cpp:229:22'
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 186, Column: 20 }
+Function:        _ZL12dw_row_stagePKhS0_PKiPhiiiiiiiiii
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 186, 
+                       Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      dw_weights
+  - String:          ' '
+  - Function:        'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, Column: 41 }
+Function:        _ZL12pw_row_stagePKhS0_PKiPhiiiiiiiiiii
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 387, 
+                       Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      pw_weights
+  - String:          ' '
+  - Function:        'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 624, Column: 13 }
+Function:        dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc
+Args:            
+  - Callee:          'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int) (.1)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 644, Column: 17 }
+Function:        dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc
+Args:            
+  - Callee:          'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int) (.1)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 335, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 589, Column: 31 }
+Function:        dataflow_in_loop_TILE_LOOP.1
+Args:            
+  - Callee:          dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc.1
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          dataflow_in_loop_TILE_LOOP.1
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 615, Column: 6 }
+Function:        dataflow_in_loop_TILE_LOOP.1
+Args:            
+  - Callee:          dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          dataflow_in_loop_TILE_LOOP.1
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 634, Column: 13 }
+Function:        dataflow_in_loop_TILE_LOOP.1
+Args:            
+  - Callee:          dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          dataflow_in_loop_TILE_LOOP.1
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 589, Column: 31 }
+Function:        _Z21mobilenet_block_accelPKhS0_PKiS0_S2_Phiiiiiiiiiiiiiiii
+Args:            
+  - Callee:          dataflow_in_loop_TILE_LOOP.1
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_block_accel(unsigned char const*, unsigned char const*, int const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int)'
+    DebugLoc:        { File: src/mobilenet_block_accel.cpp, Line: 497, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

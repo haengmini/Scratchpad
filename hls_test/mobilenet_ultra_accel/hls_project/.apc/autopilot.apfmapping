@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mobilenet_block_accel.hpp" path="D:\Lab\scratchpad\hls_test\mobilenet_ultra_accel\src\mobilenet_block_accel.hpp"/>
+    <originFiles name="mobilenet_block_accel.cpp" path="D:\Lab\scratchpad\hls_test\mobilenet_ultra_accel\src\mobilenet_block_accel.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

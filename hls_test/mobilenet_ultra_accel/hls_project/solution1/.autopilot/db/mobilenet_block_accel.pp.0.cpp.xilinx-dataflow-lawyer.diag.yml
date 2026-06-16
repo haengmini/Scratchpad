@@ -1,0 +1,16 @@
+---
+MainSourceFile:  'D:/Lab/scratchpad/hls_test/mobilenet_ultra_accel/hls_project/solution1/.autopilot/db/mobilenet_block_accel.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-7] As the loop bound is not a constant or function argument, the compiler may not successfully process the dataflow loop'
+    FileOffset:      '586:42'
+    FilePath:        src/mobilenet_block_accel.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '612:9'
+    FilePath:        src/mobilenet_block_accel.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '612:9'
+    FilePath:        src/mobilenet_block_accel.cpp
+...

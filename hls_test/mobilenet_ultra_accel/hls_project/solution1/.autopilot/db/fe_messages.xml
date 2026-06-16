@@ -1,0 +1,242 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-110" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:586:42" msg_body="As the loop bound is not a constant or function argument, the compiler may not successfully process the dataflow loop"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:612:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:78:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_round_shift" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clamp_u8" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:105:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_requantize" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:159:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=line_buf complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=window complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:176:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_cache complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:188:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:205:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:245:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:261:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:272:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:274:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:336:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:344:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_buf cyclic factor=16 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:348:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=wgt_tile complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:349:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=wgt_tile cyclic factor=16 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:353:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=acc_buf complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:371:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:398:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:412:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:419:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:431:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pw_row_stage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Lab/scratchpad/hls_test/mobilenet_ultra_accel/run_synth.tcl:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=mobilenet_block_accel" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:508:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=input offset=slave bundle=gmem_in depth=1605632" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:509:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=dw_weights offset=slave bundle=gmem_dw_w depth=9216" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:510:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=dw_bias offset=slave bundle=gmem_dw_w depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:511:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=pw_weights offset=slave bundle=gmem_pw_w depth=1048576" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:512:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=pw_bias offset=slave bundle=gmem_pw_w depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:513:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=output offset=slave bundle=gmem_out depth=1605632" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:519:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=input bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:520:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_weights bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:521:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_bias bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:522:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_weights bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:523:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_bias bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:524:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=output bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:525:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=height bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:526:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=width bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:527:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=c_in bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:528:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=c_out bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:530:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_in_zp bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:531:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_w_zp bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:532:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_out_zp bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:533:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_multiplier bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:534:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_shift bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:535:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dw_apply_relu6 bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:537:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_act_zp bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:538:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_wgt_zp bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:539:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_out_zp bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:540:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_M_mantissa bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:541:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_M_shift bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:542:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pw_use_bias bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:543:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:562:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=inter_ping cyclic factor=16 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:565:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=inter_pong cyclic factor=16 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/mobilenet_block_accel.cpp:612:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mobilenet_block_accel" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:282:36" msg_body="Inlining function 'dw_round_shift(int, int)' into 'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'">
+        <args Callee="dw_round_shift(int, int)" Callee-DebugLoc="File src/mobilenet_block_accel.cpp Line 77 Column 0" Caller="dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)" Caller-DebugLoc="File src/mobilenet_block_accel.cpp Line 158 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:292:63" msg_body="Inlining function 'clamp_u8(int)' into 'dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)'">
+        <args Callee="clamp_u8(int)" Callee-DebugLoc="File src/mobilenet_block_accel.cpp Line 88 Column 0" Caller="dw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int)" Caller-DebugLoc="File src/mobilenet_block_accel.cpp Line 158 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:435:44" msg_body="Inlining function 'pw_requantize(int, int, int, int, int)' into 'pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)'">
+        <args Callee="pw_requantize(int, int, int, int, int)" Callee-DebugLoc="File src/mobilenet_block_accel.cpp Line 104 Column 0" Caller="pw_row_stage(unsigned char const*, unsigned char const*, int const*, unsigned char*, int, int, int, int, int, int, int, int, int, int, int)" Caller-DebugLoc="File src/mobilenet_block_accel.cpp Line 335 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:418:34" msg_body="Loop 'PW_TILE_MAC' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="PW_TILE_MAC"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:260:31" msg_body="Loop 'DW_WIN_SHIFT' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="DW_WIN_SHIFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:271:28" msg_body="Loop 'DW_MAC_KH' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="DW_MAC_KH"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:273:13" msg_body="Loop 'DW_MAC_KW' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="DW_MAC_KW"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:335:0" msg_body="Unrolling loop 'PW_INIT_ACC' (src/mobilenet_block_accel.cpp:397:30) in function 'pw_row_stage' completely with a factor of 16">
+        <args Factor="16" LoopLoc="src/mobilenet_block_accel.cpp:397:30" LoopName="PW_INIT_ACC"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:335:0" msg_body="Unrolling loop 'PW_TILE_MAC' (src/mobilenet_block_accel.cpp:418:34) in function 'pw_row_stage' completely with a factor of 16">
+        <args Factor="16" LoopLoc="src/mobilenet_block_accel.cpp:418:34" LoopName="PW_TILE_MAC"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:335:0" msg_body="Unrolling loop 'PW_STORE_OUT' (src/mobilenet_block_accel.cpp:430:31) in function 'pw_row_stage' completely with a factor of 16">
+        <args Factor="16" LoopLoc="src/mobilenet_block_accel.cpp:430:31" LoopName="PW_STORE_OUT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:158:0" msg_body="Unrolling loop 'VITIS_LOOP_230_2' (src/mobilenet_block_accel.cpp:230:31) in function 'dw_row_stage' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/mobilenet_block_accel.cpp:230:31" LoopName="VITIS_LOOP_230_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:158:0" msg_body="Unrolling loop 'DW_WIN_SHIFT' (src/mobilenet_block_accel.cpp:260:31) in function 'dw_row_stage' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/mobilenet_block_accel.cpp:260:31" LoopName="DW_WIN_SHIFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:158:0" msg_body="Unrolling loop 'DW_MAC_KH' (src/mobilenet_block_accel.cpp:271:28) in function 'dw_row_stage' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/mobilenet_block_accel.cpp:271:28" LoopName="DW_MAC_KH"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:158:0" msg_body="Unrolling loop 'DW_MAC_KW' (src/mobilenet_block_accel.cpp:273:13) in function 'dw_row_stage' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/mobilenet_block_accel.cpp:273:13" LoopName="DW_MAC_KW"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:564:0" msg_body="Applying array_partition to '_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong': Cyclic partitioning with factor 16 on dimension 1.">
+        <args Dim="1" Factor="16" Mode="Cyclic" UOName="_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:561:0" msg_body="Applying array_partition to '_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping': Cyclic partitioning with factor 16 on dimension 1.">
+        <args Dim="1" Factor="16" Mode="Cyclic" UOName="_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:167:13" msg_body="Applying array_partition to 'line_buf': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="line_buf"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:171:13" msg_body="Applying array_partition to 'window': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="window"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:175:13" msg_body="Applying array_partition to 'w_cache': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="w_cache"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:343:13" msg_body="Applying array_partition to 'input_buf': Cyclic partitioning with factor 16 on dimension 1.">
+        <args Dim="1" Factor="16" Mode="Cyclic" UOName="input_buf"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/mobilenet_block_accel.cpp:347:13" msg_body="Applying array_partition to 'wgt_tile': Complete partitioning on dimension 1. Cyclic partitioning with factor 16 on dimension 2.">
+        <args Dim="islist 1 2" Factor="16" Mode="islist Complete Cyclic" UOName="wgt_tile"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

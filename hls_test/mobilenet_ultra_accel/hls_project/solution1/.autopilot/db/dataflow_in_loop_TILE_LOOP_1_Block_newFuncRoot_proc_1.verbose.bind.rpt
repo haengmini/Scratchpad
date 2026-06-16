@@ -1,0 +1,409 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_TILE_LOOP_1_Block_newFuncRoot_proc_1'
+================================================================
+* Date:           Mon Feb 23 14:55:19 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.006 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%tile_0_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %tile_0" [src/mobilenet_block_accel.cpp:589]   --->   Operation 2 'read' 'tile_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%zext_ln589 = zext i31 %tile_0_read" [src/mobilenet_block_accel.cpp:589]   --->   Operation 3 'zext' 'zext_ln589' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%trunc_ln589 = trunc i31 %tile_0_read" [src/mobilenet_block_accel.cpp:589]   --->   Operation 4 'trunc' 'trunc_ln589' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.28ns)   --->   "%xor_ln590 = xor i1 %trunc_ln589, i1 1" [src/mobilenet_block_accel.cpp:590]   --->   Operation 5 'xor' 'xor_ln590' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%add_ln593 = add i32 %zext_ln589, i32 4294967295" [src/mobilenet_block_accel.cpp:593]   --->   Operation 6 'add' 'add_ln593' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%icmp_ln634 = icmp_ne  i31 %tile_0_read, i31 0" [src/mobilenet_block_accel.cpp:634]   --->   Operation 7 'icmp' 'icmp_ln634' <Predicate = true> <Delay = 1.00> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mrv = insertvalue i35 <undef>, i1 %xor_ln590" [src/mobilenet_block_accel.cpp:590]   --->   Operation 8 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i35 %mrv, i32 %add_ln593" [src/mobilenet_block_accel.cpp:590]   --->   Operation 9 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i35 %mrv_1, i1 %xor_ln590" [src/mobilenet_block_accel.cpp:590]   --->   Operation 10 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i35 %mrv_2, i1 %icmp_ln634" [src/mobilenet_block_accel.cpp:590]   --->   Operation 11 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ret_ln590 = ret i35 %mrv_3" [src/mobilenet_block_accel.cpp:590]   --->   Operation 12 'ret' 'ret_ln590' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 1
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ tile_0]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+tile_0_read (read       ) [ 00]
+zext_ln589  (zext       ) [ 00]
+trunc_ln589 (trunc      ) [ 00]
+xor_ln590   (xor        ) [ 00]
+add_ln593   (add        ) [ 00]
+icmp_ln634  (icmp       ) [ 00]
+mrv         (insertvalue) [ 00]
+mrv_1       (insertvalue) [ 00]
+mrv_2       (insertvalue) [ 00]
+mrv_3       (insertvalue) [ 00]
+ret_ln590   (ret        ) [ 00]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="tile_0">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="tile_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i31"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1004" name="tile_0_read_read_fu_12">
+<pin_list>
+<pin id="13" dir="0" index="0" bw="31" slack="0"/>
+<pin id="14" dir="0" index="1" bw="31" slack="0"/>
+<pin id="15" dir="1" index="2" bw="31" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="tile_0_read/1 "/>
+</bind>
+</comp>
+
+<comp id="18" class="1004" name="zext_ln589_fu_18">
+<pin_list>
+<pin id="19" dir="0" index="0" bw="31" slack="0"/>
+<pin id="20" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln589/1 "/>
+</bind>
+</comp>
+
+<comp id="22" class="1004" name="trunc_ln589_fu_22">
+<pin_list>
+<pin id="23" dir="0" index="0" bw="31" slack="0"/>
+<pin id="24" dir="1" index="1" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="trunc_ln589/1 "/>
+</bind>
+</comp>
+
+<comp id="26" class="1004" name="xor_ln590_fu_26">
+<pin_list>
+<pin id="27" dir="0" index="0" bw="1" slack="0"/>
+<pin id="28" dir="0" index="1" bw="1" slack="0"/>
+<pin id="29" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="xor(25) " fcode="xor"/>
+<opset="xor_ln590/1 "/>
+</bind>
+</comp>
+
+<comp id="32" class="1004" name="add_ln593_fu_32">
+<pin_list>
+<pin id="33" dir="0" index="0" bw="31" slack="0"/>
+<pin id="34" dir="0" index="1" bw="1" slack="0"/>
+<pin id="35" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln593/1 "/>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="icmp_ln634_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="31" slack="0"/>
+<pin id="40" dir="0" index="1" bw="1" slack="0"/>
+<pin id="41" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln634/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="mrv_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="35" slack="0"/>
+<pin id="46" dir="0" index="1" bw="1" slack="0"/>
+<pin id="47" dir="1" index="2" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv/1 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="mrv_1_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="35" slack="0"/>
+<pin id="52" dir="0" index="1" bw="32" slack="0"/>
+<pin id="53" dir="1" index="2" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_1/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="mrv_2_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="35" slack="0"/>
+<pin id="58" dir="0" index="1" bw="1" slack="0"/>
+<pin id="59" dir="1" index="2" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_2/1 "/>
+</bind>
+</comp>
+
+<comp id="62" class="1004" name="mrv_3_fu_62">
+<pin_list>
+<pin id="63" dir="0" index="0" bw="35" slack="0"/>
+<pin id="64" dir="0" index="1" bw="1" slack="0"/>
+<pin id="65" dir="1" index="2" bw="35" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_3/1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="16"><net_src comp="2" pin="0"/><net_sink comp="12" pin=0"/></net>
+
+<net id="17"><net_src comp="0" pin="0"/><net_sink comp="12" pin=1"/></net>
+
+<net id="21"><net_src comp="12" pin="2"/><net_sink comp="18" pin=0"/></net>
+
+<net id="25"><net_src comp="12" pin="2"/><net_sink comp="22" pin=0"/></net>
+
+<net id="30"><net_src comp="22" pin="1"/><net_sink comp="26" pin=0"/></net>
+
+<net id="31"><net_src comp="4" pin="0"/><net_sink comp="26" pin=1"/></net>
+
+<net id="36"><net_src comp="18" pin="1"/><net_sink comp="32" pin=0"/></net>
+
+<net id="37"><net_src comp="6" pin="0"/><net_sink comp="32" pin=1"/></net>
+
+<net id="42"><net_src comp="12" pin="2"/><net_sink comp="38" pin=0"/></net>
+
+<net id="43"><net_src comp="8" pin="0"/><net_sink comp="38" pin=1"/></net>
+
+<net id="48"><net_src comp="10" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="49"><net_src comp="26" pin="2"/><net_sink comp="44" pin=1"/></net>
+
+<net id="54"><net_src comp="44" pin="2"/><net_sink comp="50" pin=0"/></net>
+
+<net id="55"><net_src comp="32" pin="2"/><net_sink comp="50" pin=1"/></net>
+
+<net id="60"><net_src comp="50" pin="2"/><net_sink comp="56" pin=0"/></net>
+
+<net id="61"><net_src comp="26" pin="2"/><net_sink comp="56" pin=1"/></net>
+
+<net id="66"><net_src comp="56" pin="2"/><net_sink comp="62" pin=0"/></net>
+
+<net id="67"><net_src comp="38" pin="2"/><net_sink comp="62" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: dataflow_in_loop_TILE_LOOP.1_Block_newFuncRoot_proc.1 : tile_0 | {1 }
+  - Chain level:
+	State 1
+		xor_ln590 : 1
+		add_ln593 : 1
+		mrv : 1
+		mrv_1 : 2
+		mrv_2 : 3
+		mrv_3 : 4
+		ret_ln590 : 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------|---------|---------|
+| Operation|     Functional Unit    |    FF   |   LUT   |
+|----------|------------------------|---------|---------|
+|    add   |     add_ln593_fu_32    |    0    |    38   |
+|----------|------------------------|---------|---------|
+|   icmp   |    icmp_ln634_fu_38    |    0    |    38   |
+|----------|------------------------|---------|---------|
+|    xor   |     xor_ln590_fu_26    |    0    |    2    |
+|----------|------------------------|---------|---------|
+|   read   | tile_0_read_read_fu_12 |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   zext   |    zext_ln589_fu_18    |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   trunc  |    trunc_ln589_fu_22   |    0    |    0    |
+|----------|------------------------|---------|---------|
+|          |        mrv_fu_44       |    0    |    0    |
+|insertvalue|       mrv_1_fu_50      |    0    |    0    |
+|          |       mrv_2_fu_56      |    0    |    0    |
+|          |       mrv_3_fu_62      |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   Total  |                        |    0    |    78   |
+|----------|------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |   FF   |   LUT  |
++-----------+--------+--------+
+|  Function |    0   |   78   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    -   |    -   |
+|  Register |    -   |    -   |
++-----------+--------+--------+
+|   Total   |    0   |   78   |
++-----------+--------+--------+

@@ -1,0 +1,1071 @@
+<stg><name>dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc</name>
+
+
+<trans_list>
+
+<trans id="31" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_pw_w, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 262144, void @empty_0, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem_out, void @empty_5, i32 0, i32 0, void @empty_42, i32 0, i32 1605632, void @empty_1, void @empty_44, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:2 %pw_use_bias_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_use_bias
+
+]]></Node>
+<StgValue><ssdm name="pw_use_bias_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:3 %pw_M_shift_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_shift
+
+]]></Node>
+<StgValue><ssdm name="pw_M_shift_read"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="55" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:4 %pw_M_mantissa_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_M_mantissa
+
+]]></Node>
+<StgValue><ssdm name="pw_M_mantissa_read"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="56" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:5 %pw_out_zp_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pw_out_zp
+
+]]></Node>
+<StgValue><ssdm name="pw_out_zp_read"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="57" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+entry:6 %pw_wgt_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_wgt_zp
+
+]]></Node>
+<StgValue><ssdm name="pw_wgt_zp_read"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+entry:7 %pw_act_zp_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pw_act_zp
+
+]]></Node>
+<StgValue><ssdm name="pw_act_zp_read"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="59" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:8 %c_out_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_out
+
+]]></Node>
+<StgValue><ssdm name="c_out_read"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="60" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:9 %c_in_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c_in
+
+]]></Node>
+<StgValue><ssdm name="c_in_read"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="61" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:10 %width_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %width
+
+]]></Node>
+<StgValue><ssdm name="width_read"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="62" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:11 %height_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %height
+
+]]></Node>
+<StgValue><ssdm name="height_read"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="63" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:12 %p_read_2 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read2
+
+]]></Node>
+<StgValue><ssdm name="p_read_2"/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="64" bw="64" op_0_bw="64" op_1_bw="64">
+<![CDATA[
+entry:13 %output_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_r
+
+]]></Node>
+<StgValue><ssdm name="output_read"/></StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="65" bw="64" op_0_bw="64" op_1_bw="64">
+<![CDATA[
+entry:14 %pw_bias_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_bias
+
+]]></Node>
+<StgValue><ssdm name="pw_bias_read"/></StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="66" bw="64" op_0_bw="64" op_1_bw="64">
+<![CDATA[
+entry:15 %pw_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %pw_weights
+
+]]></Node>
+<StgValue><ssdm name="pw_weights_read"/></StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="67" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+entry:16 %p_read_3 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %p_read1
+
+]]></Node>
+<StgValue><ssdm name="p_read_3"/></StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="68" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+entry:17 %p_read_4 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %p_read
+
+]]></Node>
+<StgValue><ssdm name="p_read_4"/></StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="69" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+entry:18 %br_ln634 = br i1 %p_read_4, void %dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc.exit, void %if.then7.i.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln634"/></StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="71" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+if.then7.i.i:0 %br_ln635 = br i1 %p_read_3, void %if.then9.i.i, void %if.else10.i.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln635"/></StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+<literal name="p_read_3" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="73" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="32" op_18_bw="64" op_19_bw="64" op_20_bw="8" op_21_bw="64" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="16" op_28_bw="16" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32">
+<![CDATA[
+if.then9.i.i:0 %call_ln636 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln636"/></StgValue>
+</operation>
+
+<operation id="24" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+<literal name="p_read_3" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="76" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="32" op_18_bw="64" op_19_bw="64" op_20_bw="8" op_21_bw="64" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="16" op_28_bw="16" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32">
+<![CDATA[
+if.else10.i.i:0 %call_ln644 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln644"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="25" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+<literal name="p_read_3" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="73" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="32" op_18_bw="64" op_19_bw="64" op_20_bw="8" op_21_bw="64" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="16" op_28_bw="16" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32">
+<![CDATA[
+if.then9.i.i:0 %call_ln636 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln636"/></StgValue>
+</operation>
+
+<operation id="26" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+<literal name="p_read_3" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="74" bw="0" op_0_bw="0">
+<![CDATA[
+if.then9.i.i:1 %br_ln643 = br void %if.end11.i.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln643"/></StgValue>
+</operation>
+
+<operation id="27" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+<literal name="p_read_3" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="76" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="32" op_18_bw="64" op_19_bw="64" op_20_bw="8" op_21_bw="64" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="16" op_28_bw="16" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32">
+<![CDATA[
+if.else10.i.i:0 %call_ln644 = call void @pw_row_stage, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1, i8 %mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14, i8 %p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15, i32 %gmem_pw_w, i64 %pw_weights_read, i64 %pw_bias_read, i8 %gmem_out, i64 %output_read, i32 %p_read_2, i32 %height_read, i32 %width_read, i32 %c_in_read, i32 %c_out_read, i16 %pw_act_zp_read, i16 %pw_wgt_zp_read, i32 %pw_out_zp_read, i32 %pw_M_mantissa_read, i32 %pw_M_shift_read, i32 %pw_use_bias_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln644"/></StgValue>
+</operation>
+
+<operation id="28" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+<literal name="p_read_3" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="77" bw="0" op_0_bw="0">
+<![CDATA[
+if.else10.i.i:1 %br_ln0 = br void %if.end11.i.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+
+<operation id="29" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="p_read_4" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="79" bw="0" op_0_bw="0">
+<![CDATA[
+if.end11.i.i:0 %br_ln652 = br void %dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc.exit
+
+]]></Node>
+<StgValue><ssdm name="br_ln652"/></StgValue>
+</operation>
+
+<operation id="30" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="81" bw="0">
+<![CDATA[
+dataflow_in_loop_TILE_LOOP.1_Block_if.end.aft_proc.exit:0 %ret_ln634 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln634"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="35" name="p_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read"/></StgValue>
+</port>
+<port id="36" name="p_read1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read1"/></StgValue>
+</port>
+<port id="37" name="gmem_pw_w" dir="0" iftype="4">
+<core>NULL</core><StgValue><ssdm name="gmem_pw_w"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="38" name="pw_weights" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_weights"/></StgValue>
+</port>
+<port id="39" name="pw_bias" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_bias"/></StgValue>
+</port>
+<port id="40" name="gmem_out" dir="1" iftype="4">
+<core>NULL</core><StgValue><ssdm name="gmem_out"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="41" name="output_r" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="output_r"/></StgValue>
+</port>
+<port id="42" name="p_read2" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read2"/></StgValue>
+</port>
+<port id="43" name="height" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="height"/></StgValue>
+</port>
+<port id="44" name="width" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="width"/></StgValue>
+</port>
+<port id="45" name="c_in" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="c_in"/></StgValue>
+</port>
+<port id="46" name="c_out" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="c_out"/></StgValue>
+</port>
+<port id="47" name="pw_act_zp" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_act_zp"/></StgValue>
+</port>
+<port id="48" name="pw_wgt_zp" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_wgt_zp"/></StgValue>
+</port>
+<port id="49" name="pw_out_zp" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_out_zp"/></StgValue>
+</port>
+<port id="50" name="pw_M_mantissa" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_M_mantissa"/></StgValue>
+</port>
+<port id="51" name="pw_M_shift" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_M_shift"/></StgValue>
+</port>
+<port id="52" name="pw_use_bias" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pw_use_bias"/></StgValue>
+</port>
+<port id="53" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="54" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="55" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="56" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="57" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="58" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="59" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="60" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="61" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="62" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="63" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="64" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="65" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="66" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="67" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="68" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="69" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="70" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="71" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="72" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="73" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="74" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="75" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="76" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="77" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="78" name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="79" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="80" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="81" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="82" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="83" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="84" name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="86" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="85" toId="3">
+</dataflow>
+<dataflow id="87" from="gmem_pw_w" to="specinterface_ln0" fromId="37" toId="3">
+</dataflow>
+<dataflow id="89" from="empty_5" to="specinterface_ln0" fromId="88" toId="3">
+</dataflow>
+<dataflow id="91" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="3">
+</dataflow>
+<dataflow id="92" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="3">
+</dataflow>
+<dataflow id="94" from="empty_42" to="specinterface_ln0" fromId="93" toId="3">
+</dataflow>
+<dataflow id="95" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="3">
+</dataflow>
+<dataflow id="97" from="StgValue_96" to="specinterface_ln0" fromId="96" toId="3">
+</dataflow>
+<dataflow id="99" from="empty_0" to="specinterface_ln0" fromId="98" toId="3">
+</dataflow>
+<dataflow id="101" from="empty_44" to="specinterface_ln0" fromId="100" toId="3">
+</dataflow>
+<dataflow id="102" from="empty_42" to="specinterface_ln0" fromId="93" toId="3">
+</dataflow>
+<dataflow id="104" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="3">
+</dataflow>
+<dataflow id="105" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="3">
+</dataflow>
+<dataflow id="106" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="3">
+</dataflow>
+<dataflow id="107" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="3">
+</dataflow>
+<dataflow id="108" from="empty_42" to="specinterface_ln0" fromId="93" toId="3">
+</dataflow>
+<dataflow id="109" from="empty_42" to="specinterface_ln0" fromId="93" toId="3">
+</dataflow>
+<dataflow id="111" from="StgValue_110" to="specinterface_ln0" fromId="110" toId="3">
+</dataflow>
+<dataflow id="112" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="3">
+</dataflow>
+<dataflow id="113" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="3">
+</dataflow>
+<dataflow id="114" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="85" toId="4">
+</dataflow>
+<dataflow id="115" from="gmem_out" to="specinterface_ln0" fromId="40" toId="4">
+</dataflow>
+<dataflow id="116" from="empty_5" to="specinterface_ln0" fromId="88" toId="4">
+</dataflow>
+<dataflow id="117" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="4">
+</dataflow>
+<dataflow id="118" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="4">
+</dataflow>
+<dataflow id="119" from="empty_42" to="specinterface_ln0" fromId="93" toId="4">
+</dataflow>
+<dataflow id="120" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="4">
+</dataflow>
+<dataflow id="122" from="StgValue_121" to="specinterface_ln0" fromId="121" toId="4">
+</dataflow>
+<dataflow id="124" from="empty_1" to="specinterface_ln0" fromId="123" toId="4">
+</dataflow>
+<dataflow id="125" from="empty_44" to="specinterface_ln0" fromId="100" toId="4">
+</dataflow>
+<dataflow id="126" from="empty_42" to="specinterface_ln0" fromId="93" toId="4">
+</dataflow>
+<dataflow id="127" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="4">
+</dataflow>
+<dataflow id="128" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="4">
+</dataflow>
+<dataflow id="129" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="4">
+</dataflow>
+<dataflow id="130" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="4">
+</dataflow>
+<dataflow id="131" from="empty_42" to="specinterface_ln0" fromId="93" toId="4">
+</dataflow>
+<dataflow id="132" from="empty_42" to="specinterface_ln0" fromId="93" toId="4">
+</dataflow>
+<dataflow id="133" from="StgValue_110" to="specinterface_ln0" fromId="110" toId="4">
+</dataflow>
+<dataflow id="134" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="4">
+</dataflow>
+<dataflow id="135" from="StgValue_90" to="specinterface_ln0" fromId="90" toId="4">
+</dataflow>
+<dataflow id="137" from="_ssdm_op_Read.ap_auto.i32" to="pw_use_bias_read" fromId="136" toId="5">
+</dataflow>
+<dataflow id="138" from="pw_use_bias" to="pw_use_bias_read" fromId="52" toId="5">
+</dataflow>
+<dataflow id="139" from="_ssdm_op_Read.ap_auto.i32" to="pw_M_shift_read" fromId="136" toId="6">
+</dataflow>
+<dataflow id="140" from="pw_M_shift" to="pw_M_shift_read" fromId="51" toId="6">
+</dataflow>
+<dataflow id="141" from="_ssdm_op_Read.ap_auto.i32" to="pw_M_mantissa_read" fromId="136" toId="7">
+</dataflow>
+<dataflow id="142" from="pw_M_mantissa" to="pw_M_mantissa_read" fromId="50" toId="7">
+</dataflow>
+<dataflow id="143" from="_ssdm_op_Read.ap_auto.i32" to="pw_out_zp_read" fromId="136" toId="8">
+</dataflow>
+<dataflow id="144" from="pw_out_zp" to="pw_out_zp_read" fromId="49" toId="8">
+</dataflow>
+<dataflow id="146" from="_ssdm_op_Read.ap_auto.i16" to="pw_wgt_zp_read" fromId="145" toId="9">
+</dataflow>
+<dataflow id="147" from="pw_wgt_zp" to="pw_wgt_zp_read" fromId="48" toId="9">
+</dataflow>
+<dataflow id="148" from="_ssdm_op_Read.ap_auto.i16" to="pw_act_zp_read" fromId="145" toId="10">
+</dataflow>
+<dataflow id="149" from="pw_act_zp" to="pw_act_zp_read" fromId="47" toId="10">
+</dataflow>
+<dataflow id="150" from="_ssdm_op_Read.ap_auto.i32" to="c_out_read" fromId="136" toId="11">
+</dataflow>
+<dataflow id="151" from="c_out" to="c_out_read" fromId="46" toId="11">
+</dataflow>
+<dataflow id="152" from="_ssdm_op_Read.ap_auto.i32" to="c_in_read" fromId="136" toId="12">
+</dataflow>
+<dataflow id="153" from="c_in" to="c_in_read" fromId="45" toId="12">
+</dataflow>
+<dataflow id="154" from="_ssdm_op_Read.ap_auto.i32" to="width_read" fromId="136" toId="13">
+</dataflow>
+<dataflow id="155" from="width" to="width_read" fromId="44" toId="13">
+</dataflow>
+<dataflow id="156" from="_ssdm_op_Read.ap_auto.i32" to="height_read" fromId="136" toId="14">
+</dataflow>
+<dataflow id="157" from="height" to="height_read" fromId="43" toId="14">
+</dataflow>
+<dataflow id="158" from="_ssdm_op_Read.ap_auto.i32" to="p_read_2" fromId="136" toId="15">
+</dataflow>
+<dataflow id="159" from="p_read2" to="p_read_2" fromId="42" toId="15">
+</dataflow>
+<dataflow id="161" from="_ssdm_op_Read.ap_auto.i64" to="output_read" fromId="160" toId="16">
+</dataflow>
+<dataflow id="162" from="output_r" to="output_read" fromId="41" toId="16">
+</dataflow>
+<dataflow id="163" from="_ssdm_op_Read.ap_auto.i64" to="pw_bias_read" fromId="160" toId="17">
+</dataflow>
+<dataflow id="164" from="pw_bias" to="pw_bias_read" fromId="39" toId="17">
+</dataflow>
+<dataflow id="165" from="_ssdm_op_Read.ap_auto.i64" to="pw_weights_read" fromId="160" toId="18">
+</dataflow>
+<dataflow id="166" from="pw_weights" to="pw_weights_read" fromId="38" toId="18">
+</dataflow>
+<dataflow id="168" from="_ssdm_op_Read.ap_auto.i1" to="p_read_3" fromId="167" toId="19">
+</dataflow>
+<dataflow id="169" from="p_read1" to="p_read_3" fromId="36" toId="19">
+</dataflow>
+<dataflow id="170" from="_ssdm_op_Read.ap_auto.i1" to="p_read_4" fromId="167" toId="20">
+</dataflow>
+<dataflow id="171" from="p_read" to="p_read_4" fromId="35" toId="20">
+</dataflow>
+<dataflow id="172" from="p_read_4" to="br_ln634" fromId="20" toId="21">
+</dataflow>
+<dataflow id="173" from="p_read_3" to="br_ln635" fromId="19" toId="22">
+</dataflow>
+<dataflow id="175" from="pw_row_stage" to="call_ln636" fromId="174" toId="23">
+</dataflow>
+<dataflow id="176" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19" to="call_ln636" fromId="69" toId="23">
+</dataflow>
+<dataflow id="177" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18" to="call_ln636" fromId="70" toId="23">
+</dataflow>
+<dataflow id="178" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17" to="call_ln636" fromId="71" toId="23">
+</dataflow>
+<dataflow id="179" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16" to="call_ln636" fromId="72" toId="23">
+</dataflow>
+<dataflow id="180" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15" to="call_ln636" fromId="73" toId="23">
+</dataflow>
+<dataflow id="181" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14" to="call_ln636" fromId="74" toId="23">
+</dataflow>
+<dataflow id="182" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13" to="call_ln636" fromId="75" toId="23">
+</dataflow>
+<dataflow id="183" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12" to="call_ln636" fromId="76" toId="23">
+</dataflow>
+<dataflow id="184" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11" to="call_ln636" fromId="77" toId="23">
+</dataflow>
+<dataflow id="185" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10" to="call_ln636" fromId="78" toId="23">
+</dataflow>
+<dataflow id="186" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10" to="call_ln636" fromId="79" toId="23">
+</dataflow>
+<dataflow id="187" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11" to="call_ln636" fromId="80" toId="23">
+</dataflow>
+<dataflow id="188" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12" to="call_ln636" fromId="81" toId="23">
+</dataflow>
+<dataflow id="189" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13" to="call_ln636" fromId="82" toId="23">
+</dataflow>
+<dataflow id="190" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14" to="call_ln636" fromId="83" toId="23">
+</dataflow>
+<dataflow id="191" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15" to="call_ln636" fromId="84" toId="23">
+</dataflow>
+<dataflow id="192" from="gmem_pw_w" to="call_ln636" fromId="37" toId="23">
+</dataflow>
+<dataflow id="193" from="pw_weights_read" to="call_ln636" fromId="18" toId="23">
+</dataflow>
+<dataflow id="194" from="pw_bias_read" to="call_ln636" fromId="17" toId="23">
+</dataflow>
+<dataflow id="195" from="gmem_out" to="call_ln636" fromId="40" toId="23">
+</dataflow>
+<dataflow id="196" from="output_read" to="call_ln636" fromId="16" toId="23">
+</dataflow>
+<dataflow id="197" from="p_read_2" to="call_ln636" fromId="15" toId="23">
+</dataflow>
+<dataflow id="198" from="height_read" to="call_ln636" fromId="14" toId="23">
+</dataflow>
+<dataflow id="199" from="width_read" to="call_ln636" fromId="13" toId="23">
+</dataflow>
+<dataflow id="200" from="c_in_read" to="call_ln636" fromId="12" toId="23">
+</dataflow>
+<dataflow id="201" from="c_out_read" to="call_ln636" fromId="11" toId="23">
+</dataflow>
+<dataflow id="202" from="pw_act_zp_read" to="call_ln636" fromId="10" toId="23">
+</dataflow>
+<dataflow id="203" from="pw_wgt_zp_read" to="call_ln636" fromId="9" toId="23">
+</dataflow>
+<dataflow id="204" from="pw_out_zp_read" to="call_ln636" fromId="8" toId="23">
+</dataflow>
+<dataflow id="205" from="pw_M_mantissa_read" to="call_ln636" fromId="7" toId="23">
+</dataflow>
+<dataflow id="206" from="pw_M_shift_read" to="call_ln636" fromId="6" toId="23">
+</dataflow>
+<dataflow id="207" from="pw_use_bias_read" to="call_ln636" fromId="5" toId="23">
+</dataflow>
+<dataflow id="208" from="pw_row_stage" to="call_ln644" fromId="174" toId="24">
+</dataflow>
+<dataflow id="209" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9" to="call_ln644" fromId="53" toId="24">
+</dataflow>
+<dataflow id="210" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8" to="call_ln644" fromId="54" toId="24">
+</dataflow>
+<dataflow id="211" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7" to="call_ln644" fromId="55" toId="24">
+</dataflow>
+<dataflow id="212" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6" to="call_ln644" fromId="56" toId="24">
+</dataflow>
+<dataflow id="213" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5" to="call_ln644" fromId="57" toId="24">
+</dataflow>
+<dataflow id="214" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4" to="call_ln644" fromId="58" toId="24">
+</dataflow>
+<dataflow id="215" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3" to="call_ln644" fromId="59" toId="24">
+</dataflow>
+<dataflow id="216" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2" to="call_ln644" fromId="60" toId="24">
+</dataflow>
+<dataflow id="217" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1" to="call_ln644" fromId="61" toId="24">
+</dataflow>
+<dataflow id="218" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un" to="call_ln644" fromId="62" toId="24">
+</dataflow>
+<dataflow id="219" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10" to="call_ln644" fromId="63" toId="24">
+</dataflow>
+<dataflow id="220" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11" to="call_ln644" fromId="64" toId="24">
+</dataflow>
+<dataflow id="221" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12" to="call_ln644" fromId="65" toId="24">
+</dataflow>
+<dataflow id="222" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13" to="call_ln644" fromId="66" toId="24">
+</dataflow>
+<dataflow id="223" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14" to="call_ln644" fromId="67" toId="24">
+</dataflow>
+<dataflow id="224" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15" to="call_ln644" fromId="68" toId="24">
+</dataflow>
+<dataflow id="225" from="gmem_pw_w" to="call_ln644" fromId="37" toId="24">
+</dataflow>
+<dataflow id="226" from="pw_weights_read" to="call_ln644" fromId="18" toId="24">
+</dataflow>
+<dataflow id="227" from="pw_bias_read" to="call_ln644" fromId="17" toId="24">
+</dataflow>
+<dataflow id="228" from="gmem_out" to="call_ln644" fromId="40" toId="24">
+</dataflow>
+<dataflow id="229" from="output_read" to="call_ln644" fromId="16" toId="24">
+</dataflow>
+<dataflow id="230" from="p_read_2" to="call_ln644" fromId="15" toId="24">
+</dataflow>
+<dataflow id="231" from="height_read" to="call_ln644" fromId="14" toId="24">
+</dataflow>
+<dataflow id="232" from="width_read" to="call_ln644" fromId="13" toId="24">
+</dataflow>
+<dataflow id="233" from="c_in_read" to="call_ln644" fromId="12" toId="24">
+</dataflow>
+<dataflow id="234" from="c_out_read" to="call_ln644" fromId="11" toId="24">
+</dataflow>
+<dataflow id="235" from="pw_act_zp_read" to="call_ln644" fromId="10" toId="24">
+</dataflow>
+<dataflow id="236" from="pw_wgt_zp_read" to="call_ln644" fromId="9" toId="24">
+</dataflow>
+<dataflow id="237" from="pw_out_zp_read" to="call_ln644" fromId="8" toId="24">
+</dataflow>
+<dataflow id="238" from="pw_M_mantissa_read" to="call_ln644" fromId="7" toId="24">
+</dataflow>
+<dataflow id="239" from="pw_M_shift_read" to="call_ln644" fromId="6" toId="24">
+</dataflow>
+<dataflow id="240" from="pw_use_bias_read" to="call_ln644" fromId="5" toId="24">
+</dataflow>
+<dataflow id="241" from="pw_row_stage" to="call_ln636" fromId="174" toId="25">
+</dataflow>
+<dataflow id="242" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_19" to="call_ln636" fromId="69" toId="25">
+</dataflow>
+<dataflow id="243" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_18" to="call_ln636" fromId="70" toId="25">
+</dataflow>
+<dataflow id="244" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_17" to="call_ln636" fromId="71" toId="25">
+</dataflow>
+<dataflow id="245" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_16" to="call_ln636" fromId="72" toId="25">
+</dataflow>
+<dataflow id="246" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_15" to="call_ln636" fromId="73" toId="25">
+</dataflow>
+<dataflow id="247" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_14" to="call_ln636" fromId="74" toId="25">
+</dataflow>
+<dataflow id="248" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_13" to="call_ln636" fromId="75" toId="25">
+</dataflow>
+<dataflow id="249" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_12" to="call_ln636" fromId="76" toId="25">
+</dataflow>
+<dataflow id="250" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_11" to="call_ln636" fromId="77" toId="25">
+</dataflow>
+<dataflow id="251" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_10" to="call_ln636" fromId="78" toId="25">
+</dataflow>
+<dataflow id="252" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_10" to="call_ln636" fromId="79" toId="25">
+</dataflow>
+<dataflow id="253" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_11" to="call_ln636" fromId="80" toId="25">
+</dataflow>
+<dataflow id="254" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_12" to="call_ln636" fromId="81" toId="25">
+</dataflow>
+<dataflow id="255" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_13" to="call_ln636" fromId="82" toId="25">
+</dataflow>
+<dataflow id="256" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_14" to="call_ln636" fromId="83" toId="25">
+</dataflow>
+<dataflow id="257" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_ping_15" to="call_ln636" fromId="84" toId="25">
+</dataflow>
+<dataflow id="258" from="gmem_pw_w" to="call_ln636" fromId="37" toId="25">
+</dataflow>
+<dataflow id="259" from="pw_weights_read" to="call_ln636" fromId="18" toId="25">
+</dataflow>
+<dataflow id="260" from="pw_bias_read" to="call_ln636" fromId="17" toId="25">
+</dataflow>
+<dataflow id="261" from="gmem_out" to="call_ln636" fromId="40" toId="25">
+</dataflow>
+<dataflow id="262" from="output_read" to="call_ln636" fromId="16" toId="25">
+</dataflow>
+<dataflow id="263" from="p_read_2" to="call_ln636" fromId="15" toId="25">
+</dataflow>
+<dataflow id="264" from="height_read" to="call_ln636" fromId="14" toId="25">
+</dataflow>
+<dataflow id="265" from="width_read" to="call_ln636" fromId="13" toId="25">
+</dataflow>
+<dataflow id="266" from="c_in_read" to="call_ln636" fromId="12" toId="25">
+</dataflow>
+<dataflow id="267" from="c_out_read" to="call_ln636" fromId="11" toId="25">
+</dataflow>
+<dataflow id="268" from="pw_act_zp_read" to="call_ln636" fromId="10" toId="25">
+</dataflow>
+<dataflow id="269" from="pw_wgt_zp_read" to="call_ln636" fromId="9" toId="25">
+</dataflow>
+<dataflow id="270" from="pw_out_zp_read" to="call_ln636" fromId="8" toId="25">
+</dataflow>
+<dataflow id="271" from="pw_M_mantissa_read" to="call_ln636" fromId="7" toId="25">
+</dataflow>
+<dataflow id="272" from="pw_M_shift_read" to="call_ln636" fromId="6" toId="25">
+</dataflow>
+<dataflow id="273" from="pw_use_bias_read" to="call_ln636" fromId="5" toId="25">
+</dataflow>
+<dataflow id="274" from="pw_row_stage" to="call_ln644" fromId="174" toId="27">
+</dataflow>
+<dataflow id="275" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_9" to="call_ln644" fromId="53" toId="27">
+</dataflow>
+<dataflow id="276" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_8" to="call_ln644" fromId="54" toId="27">
+</dataflow>
+<dataflow id="277" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_7" to="call_ln644" fromId="55" toId="27">
+</dataflow>
+<dataflow id="278" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_6" to="call_ln644" fromId="56" toId="27">
+</dataflow>
+<dataflow id="279" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_5" to="call_ln644" fromId="57" toId="27">
+</dataflow>
+<dataflow id="280" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_4" to="call_ln644" fromId="58" toId="27">
+</dataflow>
+<dataflow id="281" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_3" to="call_ln644" fromId="59" toId="27">
+</dataflow>
+<dataflow id="282" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_2" to="call_ln644" fromId="60" toId="27">
+</dataflow>
+<dataflow id="283" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un_1" to="call_ln644" fromId="61" toId="27">
+</dataflow>
+<dataflow id="284" from="mobilenet_block_accel_unsigned_char_const_unsigned_char_const_int_const_un" to="call_ln644" fromId="62" toId="27">
+</dataflow>
+<dataflow id="285" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_10" to="call_ln644" fromId="63" toId="27">
+</dataflow>
+<dataflow id="286" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_11" to="call_ln644" fromId="64" toId="27">
+</dataflow>
+<dataflow id="287" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_12" to="call_ln644" fromId="65" toId="27">
+</dataflow>
+<dataflow id="288" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_13" to="call_ln644" fromId="66" toId="27">
+</dataflow>
+<dataflow id="289" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_14" to="call_ln644" fromId="67" toId="27">
+</dataflow>
+<dataflow id="290" from="p_ZZ21mobilenet_block_accelPKhS0_PKiS0_S2_PhiiiiiiiiiiiiiiiiE10inter_pong_15" to="call_ln644" fromId="68" toId="27">
+</dataflow>
+<dataflow id="291" from="gmem_pw_w" to="call_ln644" fromId="37" toId="27">
+</dataflow>
+<dataflow id="292" from="pw_weights_read" to="call_ln644" fromId="18" toId="27">
+</dataflow>
+<dataflow id="293" from="pw_bias_read" to="call_ln644" fromId="17" toId="27">
+</dataflow>
+<dataflow id="294" from="gmem_out" to="call_ln644" fromId="40" toId="27">
+</dataflow>
+<dataflow id="295" from="output_read" to="call_ln644" fromId="16" toId="27">
+</dataflow>
+<dataflow id="296" from="p_read_2" to="call_ln644" fromId="15" toId="27">
+</dataflow>
+<dataflow id="297" from="height_read" to="call_ln644" fromId="14" toId="27">
+</dataflow>
+<dataflow id="298" from="width_read" to="call_ln644" fromId="13" toId="27">
+</dataflow>
+<dataflow id="299" from="c_in_read" to="call_ln644" fromId="12" toId="27">
+</dataflow>
+<dataflow id="300" from="c_out_read" to="call_ln644" fromId="11" toId="27">
+</dataflow>
+<dataflow id="301" from="pw_act_zp_read" to="call_ln644" fromId="10" toId="27">
+</dataflow>
+<dataflow id="302" from="pw_wgt_zp_read" to="call_ln644" fromId="9" toId="27">
+</dataflow>
+<dataflow id="303" from="pw_out_zp_read" to="call_ln644" fromId="8" toId="27">
+</dataflow>
+<dataflow id="304" from="pw_M_mantissa_read" to="call_ln644" fromId="7" toId="27">
+</dataflow>
+<dataflow id="305" from="pw_M_shift_read" to="call_ln644" fromId="6" toId="27">
+</dataflow>
+<dataflow id="306" from="pw_use_bias_read" to="call_ln644" fromId="5" toId="27">
+</dataflow>
+<dataflow id="307" from="p_read_4" to="StgValue_1" fromId="20" toId="1">
+</dataflow>
+<dataflow id="308" from="p_read_3" to="StgValue_1" fromId="19" toId="1">
+</dataflow>
+<dataflow id="309" from="p_read_4" to="StgValue_2" fromId="20" toId="2">
+</dataflow>
+<dataflow id="310" from="p_read_3" to="StgValue_2" fromId="19" toId="2">
+</dataflow>
+</dataflows>
+
+
+</stg>

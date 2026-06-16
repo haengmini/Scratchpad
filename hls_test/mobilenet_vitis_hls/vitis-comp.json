@@ -1,0 +1,7 @@
+{
+  "specification": "1.0",
+  "type": "HLS",
+  "name": "mobilenet_vitis_hls",
+  "part": "xczu7ev-ffvc1156-2-e",
+  "configuration": "hls_config.cfg"
+}
